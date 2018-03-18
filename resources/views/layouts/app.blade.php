@@ -30,9 +30,13 @@
         </div>
         <div class="navbar-end">
           @if(Auth::guest())
-            <a class="navbar-item" href="#">Login</a>
+            <a class="navbar-item" href="{{route('register')}}">Register</a>
           @else
-            <a class="navbar-item" href="#">Logout</a>
+          <a class="navbar-item" href="{{ route('logout') }}"onclick="event.preventDefault();document.getElementById('logout-form').submit();">
+            <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+              Logout
+            </a>
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
           @endif
         </div>
       </div>
