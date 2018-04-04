@@ -12,13 +12,17 @@
 
   <!-- Styles -->
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+  <link rel="stylesheet" href="{{asset('css/standardize.css')}}">
+  <link rel="stylesheet" href="{{asset('css/index.css')}}">
+  @yield('styles')
 </head>
-<body>
+<body class="body page-index clearfix">
   <div id="app">
     @yield('content')
   </div>
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}"></script>
+  @yield('scripts')
 </body>
 </html>

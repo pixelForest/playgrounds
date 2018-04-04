@@ -12,8 +12,10 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('responses.create');
 });
+
+Route::resource('responses', 'ResponseController');
 
 Auth::routes();
 

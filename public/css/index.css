@@ -1,0 +1,678 @@
+
+body {
+  background-color: rgb(255, 255, 255);
+  font: normal 30px/1 ITCAvantGardeStd-Md;
+  color: rgb(0, 0, 0);
+  width: 1920px;
+  height: 1080px;
+}
+
+.done {
+  display: block;
+  width: 200px;
+  height: 57px;
+  margin: 50px auto 0;
+  padding-top: 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 97, 67);
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+.form {
+  position: relative;
+  float: left;
+  z-index: 83;
+  width: 100%;
+  height: 900px;
+  overflow: hidden;
+}
+
+.h1 {
+  width: 480px;
+  margin: 0 auto;
+  font-family: ITCAvantGardeStd-Demi;
+  font-size: 72px;
+  color: rgb(51, 51, 51);
+}
+
+.h2 {
+  width: 480px;
+  margin: 24px auto 0;
+  font-size: 25px;
+  line-height: 1.3;
+  color: rgb(77, 77, 77);
+}
+
+.next {
+  display: block;
+  width: 200px;
+  height: 57px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 3px;
+  border-radius: 10px;
+  background-color: rgb(255, 97, 67);
+  font-size: 28px;
+  text-align: center;
+  letter-spacing: 1px;
+  color: white;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+.page1 {
+  position: absolute;
+  top: 75px;
+  left: 0;
+  z-index: 18;
+  width: 578px;
+  height: 732px;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+}
+
+.page1 .next,
+.page5 .next {
+  margin-top: 110px;
+}
+
+.page2 {
+  position: absolute;
+  top: 75px;
+  left: 578px;
+  z-index: 33;
+  width: 100%;
+  height: 825px;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+}
+
+.page2 .next,
+.page4 .next {
+  margin-top: 70px;
+}
+
+.page3 {
+  position: absolute;
+  top: 75px;
+  left: 1156px;
+  z-index: 47;
+  width: 100%;
+  height: 825px;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+}
+
+.page3 .next {
+  margin-top: 20px;
+}
+
+.page4 {
+  position: absolute;
+  top: 75px;
+  left: 1734px;
+  z-index: 64;
+  width: 100%;
+  height: 825px;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+}
+
+.page5 {
+  position: absolute;
+  top: 75px;
+  left: 2312px;
+  z-index: 82;
+  width: 100%;
+  height: 825px;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+}
+
+.page_indicator {
+  float: left;
+  width: 15px;
+  height: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.18);
+  border-radius: 18px;
+  background-color: #dddddd;
+  transition: all .2s;
+}
+
+.page_indicator_current {
+  border: 3px solid rgba(0, 0, 0, 0.18);
+  background-color: #fac63a;
+}
+
+.pagination {
+  position: absolute;
+  bottom: 45px;
+  left: 0;
+  right: 0;
+  z-index: 89;
+  width: 135px;
+  height: 18px;
+  margin: 0 auto;
+}
+
+.playground_wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  width: 1920px;
+  height: 1080px;
+  margin: auto;
+}
+
+.pop-over {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  z-index: 95;
+  width: 580px;
+  height: 980px;
+  margin: auto 0;
+  border: 1px solid rgb(128, 128, 128);
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 10px 50px 5px rgba(0, 0, 0, 0.3);
+  overflow: visible;
+}
+
+.selected-option {
+  background-color: rgb(53, 8, 115) !important;
+  color: white !important;
+}
+
+.q1 {
+  float: left;
+  width: 480px;
+  height: 60px;
+}
+
+.q1 .text {
+  width: 75px;
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.q10 {
+  float: left;
+  clear: both;
+  width: 480px;
+  height: 182px;
+  margin-top: 30px;
+}
+
+.q10 .text {
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.q11 {
+  float: left;
+  clear: both;
+  width: 480px;
+  height: 113px;
+  margin-top: 30px;
+}
+
+.q12-option {
+  display: inline-block;
+  position: relative;
+  float: left;
+  height: 55px;
+  padding-top: 3px;
+  border: 2px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  background-color: white;
+  font-size: 16px;
+  line-height: 1.38;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  -ms-transition: all .1s;
+  transition: all .1s;
+}
+
+.q2 .text {
+  width: 122px;
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.q3 .text {
+  width: 101px;
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.q2,
+.q3,
+.q4 {
+  float: left;
+  clear: both;
+  width: 480px;
+  height: 60px;
+  margin-top: 13px;
+}
+
+.q4 .text {
+  width: 210px;
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.q5 {
+  float: left;
+  width: 480px;
+  height: 142px;
+}
+
+.q6 {
+  float: left;
+  clear: both;
+  width: 480px;
+  height: 187px;
+  margin-top: 60px;
+}
+
+.q7 {
+  float: left;
+  width: 480px;
+  height: 153px;
+}
+
+.q8 {
+  float: left;
+  clear: both;
+  width: 480px;
+  height: 320px;
+  margin-top: 49px;
+}
+
+.q11 .text,
+.q7 .text,
+.q8 .text {
+  width: 480px;
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.q8-option {
+  display: block;
+  float: left;
+  height: 55px;
+  padding-top: 3px;
+  border: 2px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  background-color: white;
+  font-size: 16px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  -webkit-transition: all .1s;
+  -moz-transition: all .1s;
+  -o-transition: all .1s;
+  -ms-transition: all .1s;
+  transition: all .1s;
+}
+
+.q9 {
+  float: left;
+  width: 480px;
+  height: 112px;
+}
+
+.q9 .text {
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.qr-container {
+  width: 400px;
+  height: 400px;
+  margin: 45px auto 0;
+  padding:50px 80px 80px 80px;
+}
+
+.scene {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.set1 {
+  width: 480px;
+  height: 285px;
+  margin: 110px auto 0;
+}
+
+.set2 {
+  width: 480px;
+  height: 388px;
+  margin: 75px auto 0;
+}
+
+.set3 {
+  width: 480px;
+  height: 520px;
+  margin: 40px auto 0;
+}
+
+.set4 {
+  width: 480px;
+  height: 466px;
+  margin: 60px auto 0;
+}
+
+.set5 {
+  width: 480px;
+  height: 335px;
+  margin: 90px auto 0;
+}
+
+.share-panel {
+  position: absolute;
+  top: 75px;
+  left: 1px;
+  z-index: 94;
+  width: 100%;
+  height: 825px;
+  -webkit-transition: all .6s;
+  -moz-transition: all .6s;
+  -o-transition: all .6s;
+  -ms-transition: all .6s;
+  transition: all .6s;
+}
+
+.text {
+  float: left;
+  color: rgb(0, 0, 0);
+}
+
+._select {
+  display: block;
+  float: left;
+  height: 60px;
+  padding-top: 4px;
+  padding-left: 10px;
+  border: 2px solid rgb(220, 220, 220);
+  border-radius: 10px;
+  background-color: white;
+  color: rgb(0, 0, 0);
+}
+
+.q1 ._select {
+  width: 405px;
+}
+
+.q10 ._select {
+  clear: both;
+}
+
+.q11 ._select {
+  clear: both;
+  width: 480px;
+}
+
+.q2 ._select {
+  width: 358px;
+}
+
+.q3 ._select {
+  width: 379px;
+}
+
+.q4 ._select {
+  width: 270px;
+}
+
+.q5 ._select {
+  position: relative;
+  z-index: 22;
+  width: 450px;
+}
+
+.q6 ._select {
+  position: relative;
+  z-index: 27;
+  width: 450px;
+}
+
+.q7 ._select {
+  clear: both;
+  width: 520px;
+  margin-left: -10px;
+}
+
+.q9 ._select {
+  position: relative;
+  z-index: 51;
+  width: 433px;
+}
+
+.page_indicator-1,
+.page_indicator-2,
+.page_indicator-3,
+.page_indicator-4 {
+  margin-left: 15px;
+}
+
+.q12-option-1 {
+  z-index: 68;
+  width: 245px;
+}
+
+.q12-option-10 {
+  z-index: 77;
+  width: 150px;
+  margin: 15px 0 0 15px;
+}
+
+.q12-option-11 {
+  z-index: 78;
+  width: 150px;
+  margin: 15px 0 0 15px;
+}
+
+.q12-option-12 {
+  clear: both;
+  z-index: 79;
+  width: 232px;
+  margin-top: 15px;
+}
+
+.q12-option-13 {
+  z-index: 80;
+  width: 232px;
+  margin: 15px 0 0 15px;
+}
+
+.q12-option-2 {
+  z-index: 69;
+  width: 220px;
+  margin-left: 15px;
+}
+
+.q12-option-3 {
+  clear: both;
+  z-index: 70;
+  width: 110px;
+  margin-top: 15px;
+}
+
+.q12-option-4 {
+  z-index: 71;
+  width: 120px;
+  margin: 15px 0 0 15px;
+}
+
+.q12-option-5 {
+  z-index: 72;
+  width: 220px;
+  margin: 15px 0 0 15px;
+}
+
+.q12-option-6 {
+  clear: both;
+  z-index: 73;
+  width: 110px;
+  margin-top: 15px;
+}
+
+.q12-option-7 {
+  z-index: 74;
+  width: 120px;
+  margin: 15px 0 0 15px;
+}
+
+.q12-option-8 {
+  z-index: 75;
+  width: 220px;
+  margin: 15px 0 0 15px;
+}
+
+.q12-option-9 {
+  clear: both;
+  z-index: 76;
+  width: 150px;
+  margin-top: 15px;
+}
+
+.q8-option-1 {
+  position: relative;
+  clear: both;
+  z-index: 40;
+  width: 215px;
+  margin-top: 15px;
+  line-height: 1.38;
+}
+
+.q8-option-2 {
+  position: relative;
+  z-index: 41;
+  width: 255px;
+  margin: 15px 0 0 10px;
+  line-height: 1.38;
+}
+
+.q8-option-3,
+.q8-option-4 {
+  clear: both;
+  width: 480px;
+  margin-top: 10px;
+  line-height: 1.2;
+}
+
+.text-10 {
+  clear: both;
+  width: 480px;
+  margin-top: 7px;
+  line-height: 1.4;
+}
+
+.text-11 {
+  position: relative;
+  z-index: 26;
+  width: 18px;
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.text-12 {
+  position: relative;
+  z-index: 28;
+  width: 166px;
+  margin: 13px 0 0 9px;
+  line-height: 1.3;
+}
+
+.text-13 {
+  clear: both;
+  width: 480px;
+  margin-top: 7px;
+  line-height: 1.4;
+  letter-spacing: -1px;
+}
+
+.text-2 {
+  position: relative;
+  clear: both;
+  z-index: 52;
+  width: 47px;
+}
+
+.text-1,
+.text-3 {
+  width: 480px;
+}
+
+.text-4 {
+  position: relative;
+  z-index: 56;
+  width: 135px;
+  margin-left: 10px;
+}
+
+.text-8 {
+  position: relative;
+  z-index: 21;
+  width: 18px;
+  margin-top: 13px;
+  line-height: 1.3;
+}
+
+.text-9 {
+  position: relative;
+  z-index: 23;
+  width: 166px;
+  margin: 13px 0 0 11px;
+  line-height: 1.3;
+}
+
+.q10 ._select-2 {
+  position: relative;
+  z-index: 55;
+  width: 305px;
+}
+
+.q10 ._select-3 {
+  width: 375px;
+  margin-top: 10px;
+}

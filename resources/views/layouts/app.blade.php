@@ -21,7 +21,7 @@
           <a class="navbar-item" href="{{route('home')}}">
             Home
           </a>
-          <a class="navbar-item is-tab is-hidden-mobile m-l-10" href="#">
+          <a class="navbar-item is-tab is-hidden-mobile m-l-10" href="{{route('playgroundimages.index')}}">
             Images
           </a>
           <a class="navbar-item is-tab is-hidden-mobile" href="#">
@@ -47,5 +47,6 @@
 
   <!-- Scripts -->
   <script src="{{ asset('js/app.js') }}"></script>
+  @yield('scripts')
 </body>
 </html>
