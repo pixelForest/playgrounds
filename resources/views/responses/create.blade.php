@@ -11,7 +11,7 @@ label input{
   padding-top: 15px;
 }
 .is-hidden{
-  display:none;
+  opacity:0;
 }
 </style>
 @endsection
@@ -158,7 +158,7 @@ label input{
         <div id="question1" class="q1 clearfix">
           <label for="age" class="text">I am</label>
           <select id="age" class="_select" name="age" v-model="age">
-            <option value="select age">select age</option>
+            <option value="0">select age</option>
             <option value="12">under the age of 12</option>
             <option value="13">between 13–18 years old</option>
             <option value="19">between 19–29 years old</option>
@@ -220,6 +220,7 @@ label input{
   <img id="11_1" class="scene is-hidden" :src="equip11_1Url" style="z-index:-86;">
   <img id="11_2" class="scene is-hidden" :src="equip11_2Url" style="z-index:-85;">
   <img id="11_3" class="scene is-hidden" :src="equip11_3Url" style="z-index:-84;">
+  <img id="11_4" class="scene is-hidden" :src="equip11_4Url" style="z-index:-84;">
   <img id="12" class="scene is-hidden" :src="equip12Url" style="z-index:-84;">
   <img id="13_1" class="scene is-hidden" :src="equip13_1Url" style="z-index:-82;">
   <img id="13_2" class="scene is-hidden" :src="equip13_2Url" style="z-index:-81;">
@@ -281,10 +282,12 @@ var app = new Vue({
         var t1 = document.getElementById("11_1");
         var t2 = document.getElementById("11_2");
         var t3 = document.getElementById("11_3");
+        var t4 = document.getElementById("11_4");
 
         t1.classList.toggle("is-hidden");
         t2.classList.toggle("is-hidden");
         t3.classList.toggle("is-hidden");
+        t4.classList.toggle("is-hidden");
       }
       else if(val == 13)
       {
