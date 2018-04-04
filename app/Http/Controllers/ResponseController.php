@@ -40,17 +40,17 @@ class ResponseController extends Controller
     public function store(Request $request)
     {
       $this->validate($request,array(
-        'age' => 'required',
-        'sex' => 'required',
-        'children' => 'required',
-        'housing' => 'required',
-        'belonging' => 'required',
-        'inclusive' => 'required',
-        'time' => 'required',
-        'company' => 'required',
-        'element' => 'required',
-        'location' => 'required',
-        'activity' => 'required',
+        'age' => 'required|numeric',
+        'sex' => 'required|min:5',
+        'children' => 'required|min:5',
+        'housing' => 'required|min:5',
+        'belonging' => 'required|min:5',
+        'inclusive' => 'required|min:5',
+        'time' => 'required|min:5',
+        'company' => 'required|min:5',
+        'element' => 'required|min:5',
+        'location' => 'required|min:5',
+        'activity' => 'required|min:5',
         'equipment' =>'required',
         'uniques' => 'required'
       ));

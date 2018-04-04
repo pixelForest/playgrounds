@@ -45,7 +45,7 @@ label input{
           <p class="text text-1">My ideal future playground will</p>
           <label for="location" class="text text-2">be</label>
           <select id="location" class="_select" name="location" v-model="location" @change="locationChange">
-            <option value="default">select a location</option>
+            <option value="0">select a location</option>
             <option value="indoors.">indoors.</option>
             <option value="outdoors">outdoors, in nature.</option>
             <option value="urban">in an urban environment.</option>
@@ -62,7 +62,7 @@ label input{
           </select>
           <label for="company" class="text text-4">with</label>
           <select id="company" class="_select _select-3" name="company" v-model="company">
-            <option value="default">select companions</option>
+            <option value="0">select companions</option>
             <option value="mychildren">my children.</option>
             <option value="children">the children I care for.</option>
             <option value="grandparents">my grandparents.</option>
@@ -75,7 +75,7 @@ label input{
         <div id="question11" class="q11 clearfix">
           <label for="activity" class="text">It will be a place for me to</label>
           <select id="activity" class="_select" name="activity" v-model="activity" @change="activityChange">
-            <option value="default">select activity</option>
+            <option value="0">select activity</option>
             <option value="friends">meet my friends.</option>
             <option value="newfriends">make new friends.</option>
             <option value="relax">relax and play by myself.</option>
@@ -142,14 +142,8 @@ label input{
     <div id="page1" class="page1 clearfix">
       <div class="h1">Hello there!</div>
       @if(count($errors)>0)
-        <p class="h2">
-      		<ul class="h2" style="color:#ff5959">
-      		@foreach($errors->all() as $error)
-
-      			<li>{{$error}}</li>
-
-      		@endforeach
-      		</ul>
+        <p class="h2"  style="color:#ff5959">
+      		Whoops, you have to select an option for each field!
       	</p>
       @else
         <p class="h2">Let's get to know one another. Please tell me about yourself.</p>
@@ -158,7 +152,7 @@ label input{
         <div id="question1" class="q1 clearfix">
           <label for="age" class="text">I am</label>
           <select id="age" class="_select" name="age" v-model="age">
-            <option value="0">select age</option>
+            <option value="default">select age</option>
             <option value="12">under the age of 12</option>
             <option value="13">between 13–18 years old</option>
             <option value="19">between 19–29 years old</option>
@@ -169,7 +163,7 @@ label input{
         <div id="question2" class="q2 clearfix">
           <label for="sex" class="text">and I'm</label>
           <select id="sex" class="_select" name="sex">
-            <option value="select gender">select gender</option>
+            <option value="0">select gender</option>
             <option value="male.">male.</option>
             <option value="female.">female.</option>
           </select>
@@ -177,7 +171,7 @@ label input{
         <div id="question3" class="q3 clearfix">
           <label for="children" class="text">I have</label>
           <select id="children" class="_select" name="children">
-            <option value="select children">select children</option>
+            <option value="0">select children</option>
             <option value="yes">children</option>
             <option value="no">no children</option>
           </select>
@@ -185,7 +179,7 @@ label input{
         <div id="question4" class="q4 clearfix">
           <label for="housing" class="text">and I live in a</label>
           <select id="housing" class="_select" name="housing">
-            <option value="select housing">select housing</option>
+            <option value="0">select housing</option>
             <option value="HDB flat.">HDB flat.</option>
             <option value="condominium.">condominium.</option>
             <option value="landed property.">landed property.</option>
@@ -231,14 +225,19 @@ label input{
 
 @section('scripts')
 <script>
+setInterval(function(){
+
+},7000);
+</script>
+<script>
 var app = new Vue({
   el: '#app',
   data:{
-    age : '0',
+    age : 'default',
     time : 'morning',
-    location: 'default',
-    activity: 'default',
-    company: 'default',
+    location: '0',
+    activity: '0',
+    company: '0',
     equipment:[],
     stats:'',
     locationUrl:'',
@@ -399,7 +398,7 @@ var app = new Vue({
       this.equip12Url = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'12.png';
       this.equip13_1Url = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'13_1.png';
       this.equip13_2Url = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'13_2.png';
-    }
+    },
 
   },
   mounted(){
