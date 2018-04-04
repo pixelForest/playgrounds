@@ -10,9 +10,6 @@ label input{
 .q8-option{
   padding-top: 15px;
 }
-.is-hidden{
-  opacity:0;
-}
 </style>
 @endsection
 @section('content')
@@ -48,6 +45,7 @@ label input{
           <p class="text text-1">My ideal future playground will</p>
           <label for="location" class="text text-2">be</label>
           <select id="location" class="_select" name="location" v-model="location" @change="locationChange">
+            <option value="default">select a location</option>
             <option value="indoors.">indoors.</option>
             <option value="outdoors">outdoors, in nature.</option>
             <option value="urban">in an urban environment.</option>
@@ -64,6 +62,7 @@ label input{
           </select>
           <label for="company" class="text text-4">with</label>
           <select id="company" class="_select _select-3" name="company" v-model="company">
+            <option value="default">select companions</option>
             <option value="mychildren">my children.</option>
             <option value="children">the children I care for.</option>
             <option value="grandparents">my grandparents.</option>
@@ -76,6 +75,7 @@ label input{
         <div id="question11" class="q11 clearfix">
           <label for="activity" class="text">It will be a place for me to</label>
           <select id="activity" class="_select" name="activity" v-model="activity" @change="activityChange">
+            <option value="default">select activity</option>
             <option value="friends">meet my friends.</option>
             <option value="newfriends">make new friends.</option>
             <option value="relax">relax and play by myself.</option>
@@ -205,25 +205,25 @@ label input{
 </div>
 <div id="pgWrapper" class="playground_wrapper clearfix">
   <img id="scene_bg" class="scene" :src="locationUrl" style="z-index:-99;">
-  <img id="1" class="scene is-hidden" :src="equip1Url" style="z-index:-83;">
-  <img id="2" class="scene is-hidden" :src="equip2Url" style="z-index:-97;">
-  <img id="3" class="scene is-hidden" :src="equip3Url" style="z-index:-89;">
-  <img id="4" class="scene is-hidden" :src="equip4Url" style="z-index:-95;">
-  <img id="5" class="scene is-hidden" :src="equip5Url" style="z-index:-94;">
-  <img id="6" class="scene is-hidden" :src="equip6Url" style="z-index:-93;">
-  <img id="7_1" class="scene is-hidden" :src="equip7_1Url" style="z-index:-92;">
-  <img id="7_2" class="scene is-hidden" :src="equip7_2Url" style="z-index:-84;">
-  <img id="7_3" class="scene is-hidden" :src="equip7_3Url" style="z-index:-90;">
-  <img id="8" class="scene is-hidden" :src="equip8Url" style="z-index:-96;">
-  <img id="9" class="scene is-hidden" :src="equip9Url" style="z-index:-88;">
-  <img id="10" class="scene is-hidden" :src="equip10Url" style="z-index:-87;">
-  <img id="11_1" class="scene is-hidden" :src="equip11_1Url" style="z-index:-86;">
-  <img id="11_2" class="scene is-hidden" :src="equip11_2Url" style="z-index:-85;">
-  <img id="11_3" class="scene is-hidden" :src="equip11_3Url" style="z-index:-84;">
-  <img id="11_4" class="scene is-hidden" :src="equip11_4Url" style="z-index:-84;">
-  <img id="12" class="scene is-hidden" :src="equip12Url" style="z-index:-84;">
-  <img id="13_1" class="scene is-hidden" :src="equip13_1Url" style="z-index:-82;">
-  <img id="13_2" class="scene is-hidden" :src="equip13_2Url" style="z-index:-81;">
+  <img id="1" class="scene scene-hidden" :src="equip1Url" style="z-index:-83;">
+  <img id="2" class="scene scene-hidden" :src="equip2Url" style="z-index:-97;">
+  <img id="3" class="scene scene-hidden" :src="equip3Url" style="z-index:-89;">
+  <img id="4" class="scene scene-hidden" :src="equip4Url" style="z-index:-95;">
+  <img id="5" class="scene scene-hidden" :src="equip5Url" style="z-index:-94;">
+  <img id="6" class="scene scene-hidden" :src="equip6Url" style="z-index:-93;">
+  <img id="7_1" class="scene scene-hidden" :src="equip7_1Url" style="z-index:-92;">
+  <img id="7_2" class="scene scene-hidden" :src="equip7_2Url" style="z-index:-84;">
+  <img id="7_3" class="scene scene-hidden" :src="equip7_3Url" style="z-index:-90;">
+  <img id="8" class="scene scene-hidden" :src="equip8Url" style="z-index:-96;">
+  <img id="9" class="scene scene-hidden" :src="equip9Url" style="z-index:-88;">
+  <img id="10" class="scene scene-hidden" :src="equip10Url" style="z-index:-87;">
+  <img id="11_1" class="scene scene-hidden" :src="equip11_1Url" style="z-index:-86;">
+  <img id="11_2" class="scene scene-hidden" :src="equip11_2Url" style="z-index:-85;">
+  <img id="11_3" class="scene scene-hidden" :src="equip11_3Url" style="z-index:-84;">
+  <img id="11_4" class="scene scene-hidden" :src="equip11_4Url" style="z-index:-84;">
+  <img id="12" class="scene scene-hidden" :src="equip12Url" style="z-index:-84;">
+  <img id="13_1" class="scene scene-hidden" :src="equip13_1Url" style="z-index:-82;">
+  <img id="13_2" class="scene scene-hidden" :src="equip13_2Url" style="z-index:-81;">
   <img id="scene_activity" class="scene" :src="activityUrl" style="z-index:-1;">
 </div>
 
@@ -234,11 +234,11 @@ label input{
 var app = new Vue({
   el: '#app',
   data:{
-    age : '',
+    age : '0',
     time : 'morning',
-    location: '',
-    activity: '',
-    company: '',
+    location: 'default',
+    activity: 'default',
+    company: 'default',
     equipment:[],
     stats:'',
     locationUrl:'',
@@ -273,9 +273,9 @@ var app = new Vue({
         var t2 = document.getElementById("7_2");
         var t3 = document.getElementById("7_3");
 
-        t1.classList.toggle("is-hidden");
-        t2.classList.toggle("is-hidden");
-        t3.classList.toggle("is-hidden");
+        t1.classList.toggle("scene-hidden");
+        t2.classList.toggle("scene-hidden");
+        t3.classList.toggle("scene-hidden");
       }
       else if(val == 11)
       {
@@ -284,23 +284,23 @@ var app = new Vue({
         var t3 = document.getElementById("11_3");
         var t4 = document.getElementById("11_4");
 
-        t1.classList.toggle("is-hidden");
-        t2.classList.toggle("is-hidden");
-        t3.classList.toggle("is-hidden");
-        t4.classList.toggle("is-hidden");
+        t1.classList.toggle("scene-hidden");
+        t2.classList.toggle("scene-hidden");
+        t3.classList.toggle("scene-hidden");
+        t4.classList.toggle("scene-hidden");
       }
       else if(val == 13)
       {
         var t1 = document.getElementById("13_1");
         var t2 = document.getElementById("13_2");
 
-        t1.classList.toggle("is-hidden");
-        t2.classList.toggle("is-hidden");
+        t1.classList.toggle("scene-hidden");
+        t2.classList.toggle("scene-hidden");
       }
       else
       {
         var t1 = document.getElementById(val);
-        t1.classList.toggle("is-hidden");
+        t1.classList.toggle("scene-hidden");
       }
 
       if(e.srcElement.checked)

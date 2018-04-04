@@ -17,7 +17,7 @@ class ResponseController extends Controller
      */
     public function index()
     {
-      $responses = Response::orderBy('id','desc')->paginate(10);
+      $responses = Response::orderBy('id','desc')->get();
       return view('responses.index')->withResponses($responses);
     }
 

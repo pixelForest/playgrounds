@@ -369,13 +369,21 @@ body {
 
 .scene {
   opacity: 1;
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: auto;
   overflow: hidden;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
+.scene-hidden{
+  opacity:0;
   -webkit-transition: all .3s;
   -moz-transition: all .3s;
   -o-transition: all .3s;
