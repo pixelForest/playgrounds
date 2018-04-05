@@ -20,6 +20,7 @@ label input{
     <div id="page5" class="page5 clearfix">
       <p class="h1">Get creative!</p>
       <p class="h2">What are playground elements that you would add to your ideal playground of 2030?</p>
+      <p class="h2" style="font-size:14px; color:#2c0c6a"> psst... You may select more than one option</p>
       <div class="set5 clearfix">
         <label id="Q12-1" class="q12-option q12-option-1"><input name="equipment[]" type="checkbox" value="1" @change="addEquipment">adult exercise equipment</label>
         <label id="Q12-2" class="q12-option q12-option-2"><input name="equipment[]" type="checkbox" value="2" @change="addEquipment">inclusive equipment</label>
@@ -55,6 +56,7 @@ label input{
         <div id="question10" class="q10 clearfix">
           <label for="time" class="text text-3">I will visit the playground</label>
           <select id="time" class="_select _select-2" name="time" v-model="time" @change="timeChange">
+            <option value="0">select time</option>
             <option value="morning">in the morning</option>
             <option value="afternoon">in the afternoon</option>
             <option value="evening">during the evening</option>
@@ -93,6 +95,7 @@ label input{
         <div id="question7" class="q7 clearfix">
           <label for="element" class="text">To me, the most important element of a playground is that</label>
           <select id="element" class="_select" name="element">
+            <option value="0">select an option</option>
             <option value="safe">it is safe.</option>
             <option value="fun">it is adventurous and fun.</option>
             <option value="community">we built it together.</option>
@@ -102,6 +105,7 @@ label input{
         </div>
         <div id="question8" class="q8 clearfix">
           <p class="text">The look of a playground is uniquely attractive when it is...</p>
+          <p class="text" style="font-size:14px; color:#2c0c6a"> psst... You may select more than one option</p>
           <label id="Q8-1" class="q8-option q8-option-1"><input name="uniques[]" type="checkbox" value="1" @change="addUnique">aesthetically pleasing</label>
           <label id="Q8-2" class="q8-option q8-option-2"><input name="uniques[]" type="checkbox" value="2" @change="addUnique">inspired by local heritage</label>
           <label id="Q8-3" class="q8-option q8-option-3"><input name="uniques[]" type="checkbox" value="3" @change="addUnique">inspired by the character of its neighbourhood</label>
@@ -117,6 +121,7 @@ label input{
         <div id="question5" class="q5 clearfix">
           <label for="inclusive" class="text text-8">I</label>
           <select id="inclusive" class="_select" name="inclusive">
+            <option value="0">select an option</option>
             <option value="strongly agree">strongly agree that</option>
             <option value="agree">agree that</option>
             <option value="am neutral">have no opinion on whether</option>
@@ -128,6 +133,7 @@ label input{
         <div id="question6" class="q6 clearfix">
           <label for="belonging" class="text text-11">I</label>
           <select id="belonging" class="_select" name="belonging">
+            <option value="0">select an option</option>
             <option value="strongly agree">strongly agree that</option>
             <option value="agree">agree that</option>
             <option value="am neutral">have no opinion on whether</option>
@@ -234,7 +240,7 @@ var app = new Vue({
   el: '#app',
   data:{
     age : 'default',
-    time : 'morning',
+    time : '0',
     location: '0',
     activity: '0',
     company: '0',
