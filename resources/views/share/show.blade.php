@@ -53,12 +53,12 @@ html, body {
 
 .dwnld {
   display: block;
-  width: 30%;
+  width: 20%;
 	padding-bottom: 10px;
   margin: 50px auto 0;
   border-radius: 10px;
   background-color: rgb(255, 97, 67);
-  font-size: 1.5vw;
+  font-size: 1vw;
   text-align: center;
   color: white;
   -webkit-transition: all .3s;
@@ -71,7 +71,7 @@ html, body {
 .fb-button{
 	margin: 50px auto 0;
 	text-align: center;
-	transform: scale(1.5);
+	transform: scale(1.3);
 }
 
 @media screen and (orientation: landscape) {
