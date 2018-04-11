@@ -51,10 +51,27 @@ html, body {
 	padding-top: 2em;
 }
 
+.dwnld {
+  display: block;
+  width: 30%;
+	padding-bottom: 10px;
+  margin: 50px auto 0;
+  border-radius: 10px;
+  background-color: rgb(255, 97, 67);
+  font-size: 1.5vw;
+  text-align: center;
+  color: white;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -o-transition: all .3s;
+  -ms-transition: all .3s;
+  transition: all .3s;
+}
+
 .fb-button{
 	margin: 50px auto 0;
 	text-align: center;
-	transform:scale(1.9);
+	transform: scale(1.5);
 }
 
 @media screen and (orientation: landscape) {
@@ -79,7 +96,7 @@ html, body {
 	<br>
 	<p class="h1"> There are many like it.</p>
 	<p class="h2">But this one's mine.</p>
-	<a href="#" class="done" style="padding-top:20px" id="btn-download" download="playgrounds2030.png">Download</a>
+	<a href="#" class="dwnld" style="padding-top:20px" id="btn-download" download="playgrounds2030.png">Download</a>
 	<div>
 		<div class="fb-button">
 			<div class="fb-share-button" data-href="{{url('/share/'.$response->id)}}"
