@@ -53,12 +53,12 @@ html, body {
 
 .dwnld {
   display: block;
-  width: 30%;
+  width: 50%;
 	padding-bottom: 10px;
   margin: 50px auto 0;
   border-radius: 10px;
   background-color: rgb(255, 97, 67);
-  font-size: 1.5vw;
+  font-size: 2vw;
   text-align: center;
   color: white;
   -webkit-transition: all .3s;
