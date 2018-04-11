@@ -71,7 +71,7 @@ html, body {
 .fb-button{
 	margin: 50px auto 0;
 	text-align: center;
-	transform: scale(1.3);
+	transform: scale(1.2);
 }
 
 @media screen and (orientation: landscape) {
