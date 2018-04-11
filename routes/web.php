@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('responses.create');
 });
 
+Route::get('/share/{id}', ['as'=>'share.show','uses'=>'ResponseController@share']);
+Route::get('/global', ['as'=>'global.show','uses'=>'ResponseController@getGlobal']);
 Route::resource('responses', 'ResponseController');
 
 Auth::routes();

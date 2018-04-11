@@ -15,14 +15,14 @@
     <p class="h1">Nice work!</p>
     <p class="h2">Thank you for taking the time to build your dream playground with us. If you would like to share or save your work, scan the QR Code or visit the link!</p>
     <div id="QR-container" class="qr-container">
-      <img src="https://api.qrserver.com/v1/create-qr-code/?data={{url('/response/'.$response->id)}}&color=00aab8&bgcolor=ffffff" alt="{{url('/response/$response->id')}}">
-      <p class="text">{{url('/response/'.$response->id)}}</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?data={{url('/share/'.$response->id)}}&color=00aab8&bgcolor=ffffff" alt="{{url('/response/$response->id')}}">
+      <p class="text">{{url('/share/'.$response->id)}}</p>
     </div>
     <button id="done" class="done"><a href="{{route('responses.create')}}" style="text-decoration:none; color:inherit">done</a></button>
   </div>
 </div>
 <div id="pgWrapper" class="playground_wrapper clearfix">
-  <img id="scene_bg" class="scene" src="{{'/images/'.$response->location.'/'.$response->time.'.png'}}" style="z-index:-99;">
+  <img id="scene_bg" class="scene" src="{{'/images/'.$response->location.'/bg.png'}}" style="z-index:-99;">
   <img id="1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/1.png'}}" style="z-index:-83;">
   <img id="2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/2.png'}}" style="z-index:-97;">
   <img id="3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/3.png'}}" style="z-index:-89;">
@@ -94,7 +94,7 @@ var app = new Vue({
         var equ = document.getElementById(id);
         equ.classList.toggle("scene-hidden");
       }
-      
+
     }
 
 

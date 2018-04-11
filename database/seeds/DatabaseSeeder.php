@@ -11,9 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('equipment')->delete();
-        DB::table('uniques')->delete();
-        
+        DB::table('users')->insert([
+          'name' => 'playgrounds2030',
+          'email' => 'playgrounds2030@nms.sg',
+          'password' => bcrypt('playgrounds'),
+        ]);
+
         DB::table('equipment')->insert(
           [
               'answer' => 'Adult Exercise Equipment',

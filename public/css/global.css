@@ -1,0 +1,95 @@
+body {
+  background-color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+
+.background {
+  display: block;
+  float: left;
+  width: 5184px;
+  height: auto;
+  overflow: hidden;
+}
+
+.global-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 5184px;
+  height: 1200px;
+}
+
+.pg1-wrapper {
+  position: absolute;
+  top: 115px;
+  left: -326px;
+  z-index: 3;
+  width: 1920px;
+  height: 1080px;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.pg1-wrapper .playground {
+  z-index: 2;
+}
+
+.pg2-wrapper {
+  position: absolute;
+  top: 115px;
+  left: 1200px;
+  z-index: 5;
+  width: 1920px;
+  height: 1080px;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.pg2-wrapper .playground {
+  z-index: 4;
+}
+
+.pg3-wrapper {
+  position: absolute;
+  top: 115px;
+  left: 2750px;
+  z-index: 7;
+  width: 1920px;
+  height: 1080px;
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+  transform: scale(1.2);
+}
+
+.pg3-wrapper .playground {
+  z-index: 6;
+}
+
+.playground {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1920px;
+  height: auto;
+  overflow: hidden;
+}
+
+.playground-hidden{
+  opacity:0;
+  top:-30px;
+  -webkit-transition: all .4s;
+  -moz-transition: all .4s;
+  -o-transition: all .4s;
+  -ms-transition: all .4s;
+  transition: all .4s;
+}

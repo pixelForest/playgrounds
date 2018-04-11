@@ -47,7 +47,7 @@ label input{
           <label for="location" class="text text-2">be</label>
           <select id="location" class="_select" name="location" v-model="location" @change="locationChange">
             <option value="0">select a location</option>
-            <option value="indoors.">indoors.</option>
+            <option value="indoors">indoors.</option>
             <option value="outdoors">outdoors, in nature.</option>
             <option value="urban">in an urban environment.</option>
             <option value="clouds">high up in the clouds.</option>
@@ -170,8 +170,8 @@ label input{
           <label for="sex" class="text">and I'm</label>
           <select id="sex" class="_select" name="sex">
             <option value="0">select gender</option>
-            <option value="male.">male.</option>
-            <option value="female.">female.</option>
+            <option value="male">male.</option>
+            <option value="female">female.</option>
           </select>
         </div>
         <div id="question3" class="q3 clearfix">
@@ -186,9 +186,9 @@ label input{
           <label for="housing" class="text">and I live in a</label>
           <select id="housing" class="_select" name="housing">
             <option value="0">select housing</option>
-            <option value="HDB flat.">HDB flat.</option>
-            <option value="condominium.">condominium.</option>
-            <option value="landed property.">landed property.</option>
+            <option value="HDB flat">HDB flat.</option>
+            <option value="condominium">condominium.</option>
+            <option value="landed property">landed property.</option>
           </select>
         </div>
       </div>
@@ -204,27 +204,27 @@ label input{
   </div>
 </div>
 <div id="pgWrapper" class="playground_wrapper clearfix">
-  <img id="scene_bg" class="scene" :src="locationUrl" style="z-index:-99;">
-  <img id="1" class="scene scene-hidden" :src="equip1Url" style="z-index:-83;">
-  <img id="2" class="scene scene-hidden" :src="equip2Url" style="z-index:-97;">
-  <img id="3" class="scene scene-hidden" :src="equip3Url" style="z-index:-89;">
-  <img id="4" class="scene scene-hidden" :src="equip4Url" style="z-index:-95;">
-  <img id="5" class="scene scene-hidden" :src="equip5Url" style="z-index:-94;">
-  <img id="6" class="scene scene-hidden" :src="equip6Url" style="z-index:-93;">
-  <img id="7_1" class="scene scene-hidden" :src="equip7_1Url" style="z-index:-92;">
-  <img id="7_2" class="scene scene-hidden" :src="equip7_2Url" style="z-index:-84;">
-  <img id="7_3" class="scene scene-hidden" :src="equip7_3Url" style="z-index:-90;">
-  <img id="8" class="scene scene-hidden" :src="equip8Url" style="z-index:-96;">
-  <img id="9" class="scene scene-hidden" :src="equip9Url" style="z-index:-88;">
-  <img id="10" class="scene scene-hidden" :src="equip10Url" style="z-index:-87;">
-  <img id="11_1" class="scene scene-hidden" :src="equip11_1Url" style="z-index:-86;">
-  <img id="11_2" class="scene scene-hidden" :src="equip11_2Url" style="z-index:-85;">
-  <img id="11_3" class="scene scene-hidden" :src="equip11_3Url" style="z-index:-84;">
-  <img id="11_4" class="scene scene-hidden" :src="equip11_4Url" style="z-index:-84;">
-  <img id="12" class="scene scene-hidden" :src="equip12Url" style="z-index:-84;">
-  <img id="13_1" class="scene scene-hidden" :src="equip13_1Url" style="z-index:-82;">
-  <img id="13_2" class="scene scene-hidden" :src="equip13_2Url" style="z-index:-81;">
-  <img id="scene_activity" class="scene" :src="activityUrl" style="z-index:-1;">
+  <img id="scene_bg" class="scene" :src="locationUrl" style="z-index:-21;">
+  <img id="1" class="scene scene-hidden" :src="equip1Url" style="z-index:-14;">
+  <img id="2" class="scene scene-hidden" :src="equip2Url" style="z-index:-5;">
+  <img id="3" class="scene scene-hidden" :src="equip3Url" style="z-index:-3;">
+  <img id="4" class="scene scene-hidden" :src="equip4Url" style="z-index:-8;">
+  <img id="5" class="scene scene-hidden" :src="equip5Url" style="z-index:-20;">
+  <img id="6" class="scene scene-hidden" :src="equip6Url" style="z-index:-16;">
+  <img id="7_1" class="scene scene-hidden" :src="equip7_1Url" style="z-index:-2;">
+  <img id="7_2" class="scene scene-hidden" :src="equip7_2Url" style="z-index:-15;">
+  <img id="7_3" class="scene scene-hidden" :src="equip7_3Url" style="z-index:-18;">
+  <img id="8" class="scene scene-hidden" :src="equip8Url" style="z-index:-4;">
+  <img id="9" class="scene scene-hidden" :src="equip9Url" style="z-index:-9;">
+  <img id="10" class="scene scene-hidden" :src="equip10Url" style="z-index:-11;">
+  <img id="11_1" class="scene scene-hidden" :src="equip11_1Url" style="z-index:-1;">
+  <img id="11_2" class="scene scene-hidden" :src="equip11_2Url" style="z-index:-6;">
+  <img id="11_3" class="scene scene-hidden" :src="equip11_3Url" style="z-index:-13;">
+  <img id="11_4" class="scene scene-hidden" :src="equip11_4Url" style="z-index:-19;">
+  <img id="12" class="scene scene-hidden" :src="equip12Url" style="z-index:-17;">
+  <img id="13_1" class="scene scene-hidden" :src="equip13_1Url" style="z-index:-12;">
+  <img id="13_2" class="scene scene-hidden" :src="equip13_2Url" style="z-index:-7;">
+  <img id="scene_activity" class="scene" :src="activityUrl" style="z-index:-10;">
 </div>
 
 @endsection
@@ -378,10 +378,10 @@ var app = new Vue({
       });
     },
     locationChange(){
-      this.locationUrl = '/images/'+this.location+'/'+this.time+'.png';
+      this.locationUrl = '/images/'+this.location+'/bg.png';
     },
     timeChange(){
-      this.locationUrl = '/images/'+this.location+'/'+this.time+'.png';
+      //this.locationUrl = '/images/'+this.location+'/'+this.time+'.png';
     },
     activityChange(){
       this.activityUrl = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'activity.png';
@@ -408,7 +408,7 @@ var app = new Vue({
 
   },
   mounted(){
-    this.locationUrl = '/images/Background_Local_Park.png';
+    this.locationUrl = '/images/_sketch.png';
     console.log(this.locationUrl);
   }
 });
