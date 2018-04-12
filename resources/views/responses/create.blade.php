@@ -68,7 +68,7 @@ label input{
             <option value="mychildren">my children.</option>
             <option value="children">the children I care for.</option>
             <option value="grandparents">my grandparents.</option>
-            <option value="parents">my parents.</option>
+            <option value="parents">my parents & siblings.</option>
             <option value="pets">my pets.</option>
             <option value="caregiver">my caregiver.</option>
             <option value="friends">my friends.</option>
