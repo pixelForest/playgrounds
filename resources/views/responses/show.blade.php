@@ -2,7 +2,7 @@
 @section('styles')
 <style>
 .text{
-  width:240px;
+  width:100%;
   margin-top: 30px;
   font-size: 13px;
   text-align: center;
