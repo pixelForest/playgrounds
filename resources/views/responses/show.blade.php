@@ -2,9 +2,10 @@
 @section('styles')
 <style>
 .text{
-  width:100%;
+  width:400px;
   margin-top: 30px;
   font-size: 13px;
+  margin-left: -80px;
   text-align: center;
   color: rgb(77, 77, 77);
 }
