@@ -24,27 +24,27 @@
   </div>
 </div>
 <div id="pgWrapper" class="playground_wrapper clearfix">
-  <img id="scene_bg" class="scene" src="{{'/images/'.$response->location.'/bg.png'}}" style="z-index:-99;">
-  <img id="1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/1.png'}}" style="z-index:-83;">
-  <img id="2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/2.png'}}" style="z-index:-97;">
-  <img id="3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/3.png'}}" style="z-index:-89;">
-  <img id="4" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/4.png'}}" style="z-index:-95;">
-  <img id="5" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/5.png'}}" style="z-index:-94;">
-  <img id="6" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/6.png'}}" style="z-index:-93;">
-  <img id="7_1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/7_1.png'}}" style="z-index:-92;">
-  <img id="7_2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/7_2.png'}}" style="z-index:-84;">
-  <img id="7_3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/7_3.png'}}" style="z-index:-90;">
-  <img id="8" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/8.png'}}" style="z-index:-96;">
-  <img id="9" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/9.png'}}" style="z-index:-88;">
-  <img id="10" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/10.png'}}" style="z-index:-87;">
-  <img id="11_1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_1.png'}}" style="z-index:-86;">
-  <img id="11_2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_2.png'}}" style="z-index:-85;">
-  <img id="11_3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_3.png'}}" style="z-index:-84;">
-  <img id="11_4" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_4.png'}}" style="z-index:-84;">
-  <img id="12" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/12.png'}}" style="z-index:-84;">
-  <img id="13_1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_1.png'}}" style="z-index:-82;">
-  <img id="13_2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_2.png'}}" style="z-index:-81;">
-  <img id="scene_activity" class="scene" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/activity.png'}}" style="z-index:-1;">
+  <img id="scene_bg" class="scene" src="{{'/images/'.$response->location.'/bg.png'}}" style="z-index:-21;">
+  <img id="1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/1.png'}}" style="z-index:-14;">
+  <img id="2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/2.png'}}" style="z-index:-5;">
+  <img id="3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/3.png'}}" style="z-index:-3;">
+  <img id="4" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/4.png'}}" style="z-index:-8;">
+  <img id="5" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/5.png'}}" style="z-index:-20;">
+  <img id="6" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/6.png'}}" style="z-index:-16;">
+  <img id="7_1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/7_1.png'}}" style="z-index:-2;">
+  <img id="7_2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/7_2.png'}}" style="z-index:-15;">
+  <img id="7_3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/7_3.png'}}" style="z-index:-18;">
+  <img id="8" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/8.png'}}" style="z-index:-4;">
+  <img id="9" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/9.png'}}" style="z-index:-9;">
+  <img id="10" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/10.png'}}" style="z-index:-11;">
+  <img id="11_1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_1.png'}}" style="z-index:-1;">
+  <img id="11_2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_2.png'}}" style="z-index:-6;">
+  <img id="11_3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_3.png'}}" style="z-index:-13;">
+  <img id="11_4" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/11_4.png'}}" style="z-index:-19;">
+  <img id="12" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/12.png'}}" style="z-index:-17;">
+  <img id="13_1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_1.png'}}" style="z-index:-12;">
+  <img id="13_2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_2.png'}}" style="z-index:-7;">
+  <img id="scene_activity" class="scene" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/activity.png'}}" style="z-index:-10;">
 </div>
 
 @endsection
