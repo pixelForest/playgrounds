@@ -160,6 +160,8 @@ html, body {
 			scene_13_1 = new Image();
 			scene_13_2 = new Image();
 			scene_activity = new Image();
+			scene_time = new Image();
+			scene_lights = new Image();
 
 			scene_bg.src = "{{'/images/'.$response->location.'/bg.png'}}";
 			scene_1.src = "{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/1.png'}}";
@@ -182,7 +184,8 @@ html, body {
 			scene_13_1.src = "{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_1.png'}}";
 			scene_13_2.src = "{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_2.png'}}";
 			scene_activity.src = "{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/activity.png'}}";
-
+			//scene_time.src = "{{'/images/'.$response->location.'/time/'.$response->time.'_filter.png'}}";
+			//scene_lights.src = "{{'/images/'.$response->location.'/time/'.$response->time.'_lights.png'}}";
 
 			scene_bg.onload =
 			scene_1.onload =
@@ -205,6 +208,8 @@ html, body {
 			scene_13_1.onload =
 			scene_13_2.onload =
 			scene_activity.onload = redraw;
+			//scene_time.onload =
+			//scene_lights.onload =
 
 		}
 		function redraw() {
@@ -270,6 +275,8 @@ html, body {
 			if(equArr.includes(11)){
 				ctx.drawImage(scene_11_1,0,0,window.innerWidth,window.innerHeight);
 			}
+			//ctx.drawImage(scene_time,0,0,window.innerWidth,window.innerHeight);
+			//ctx.drawImage(scene_lights,0,0,window.innerWidth,window.innerHeight);
 
 		}
 

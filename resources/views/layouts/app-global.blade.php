@@ -14,6 +14,7 @@
   <link href="{{ asset('css/app.css') }}" rel="stylesheet">
   <link rel="stylesheet" href="{{asset('css/standardize.css')}}">
   <link rel="stylesheet" href="{{asset('css/global.css')}}">
+  <link rel="stylesheet" href="{{asset('css/stats.css')}}">
   @yield('styles')
 </head>
 <body class="body page-global clearfix">

@@ -223,6 +223,9 @@ class ResponseController extends Controller
       $idealActivity50 = Response::select('activity')->where('age','=','50')->groupBy('activity')->orderByRaw('COUNT(*) DESC')->limit(1)->value('activity');
       $idealCompany50 = Response::select('company')->where('age','=','50')->groupBy('company')->orderByRaw('COUNT(*) DESC')->limit(1)->value('company');
       $idealLocation50 = Response::select('location')->where('age','=','50')->groupBy('location')->orderByRaw('COUNT(*) DESC')->limit(1)->value('location');
+      //pop equipment female
+      $responseEqu = Response::where('age','=','50')->get();
+      $popEqu50 =  $this->getPopEquip($responseEqu);
 
       $arr = array(
         'responsesCount'=>$responsesCount,
@@ -262,6 +265,7 @@ class ResponseController extends Controller
         'idealActivity50'=>$idealActivity50,
         'idealLocation50'=>$idealLocation50,
         'idealCompany50'=>$idealCompany50,
+        'popEqu50'=>$popEqu50,
         //pop equipment 50
       );
       $data = json_encode($arr);
@@ -269,8 +273,10 @@ class ResponseController extends Controller
     }
 
     public function getGlobal(){
+      $stats = $this->getStats();
+      $idealLocation = Response::select('location')->groupBy('location')->orderByRaw('COUNT(*) DESC')->limit(1)->value('location');
       $responses = Response::orderBy('id', 'desc')->take(3)->get();
-      return view('global')->withResponses($responses);
+      return view('global')->withResponses($responses)->withStats($stats)->withLocation($idealLocation);
     }
 
     private function getPopEquip($responseEqu)

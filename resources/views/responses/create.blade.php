@@ -225,6 +225,8 @@ label input{
   <img id="13_1" class="scene scene-hidden" :src="equip13_1Url" style="z-index:-12;">
   <img id="13_2" class="scene scene-hidden" :src="equip13_2Url" style="z-index:-7;">
   <img id="scene_activity" class="scene" :src="activityUrl" style="z-index:-10;">
+  <div id="scene_time" class="scene-time" :style="{ background: 'url(' + timeUrl + ')' }" style="z-index:0;"></div>
+  <img id="scene_lights" class="scene" :src="lightsUrl" style="z-index:1;">
 </div>
 
 @endsection
@@ -267,6 +269,8 @@ var app = new Vue({
     equip12Url:'',
     equip13_1Url:'',
     equip13_2Url:'',
+    timeUrl:'',
+    lightsUrl:'',
 
   },
   methods:{
@@ -379,9 +383,17 @@ var app = new Vue({
     },
     locationChange(){
       this.locationUrl = '/images/'+this.location+'/bg.png';
+      if(this.location = 'clouds')
+      {
+        var digi = document.getElementById('5');
+        var tree = document.getElementById('11_3');
+        digi.style.zIndex = "1";
+        tree.style.zIndex = "1";
+      }
     },
     timeChange(){
-      //this.locationUrl = '/images/'+this.location+'/'+this.time+'.png';
+      this.timeUrl = '/images/'+this.location+'/time/'+this.time+'_filter.png';
+      this.lightsUrl = '/images/'+this.location+'/time/'+this.time+'_lights.png';
     },
     activityChange(){
       this.activityUrl = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'activity.png';

@@ -45,6 +45,8 @@
   <img id="13_1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_1.png'}}" style="z-index:-12;">
   <img id="13_2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/13_2.png'}}" style="z-index:-7;">
   <img id="scene_activity" class="scene" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/activity.png'}}" style="z-index:-10;">
+  <div id="scene_time" class="scene-time"  style="z-index:0; background:url('{{'/images/'.$response->location.'/time/'.$response->time.'_filter.png'}}')"></div>
+  <img id="scene_lights" class="scene" src="{{'/images/'.$response->location.'/time/'.$response->time.'_lights.png'}}" style="z-index:1;">
 </div>
 
 @endsection
@@ -54,9 +56,18 @@
 var app = new Vue({
   el: '#app',
   data:{
-    equipment:{!!$response->equipment!!}
+    equipment:{!!$response->equipment!!},
+    location:"{{$response->location}}",
   },
   mounted(){
+    console.log(this.location);
+    if(this.location == 'clouds')
+    {
+      var digi = document.getElementById('5');
+      var tree = document.getElementById('11_3');
+      digi.style.zIndex = "1";
+      tree.style.zIndex = "1";
+    }
 
     for(var i=0; i<this.equipment.length;i++)
     {

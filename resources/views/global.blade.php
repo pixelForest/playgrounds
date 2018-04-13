@@ -7,79 +7,143 @@
   text-align: center;
   color: rgb(77, 77, 77);
 }
+.h1 {
+  width: 100%;
+  margin: auto;
+  font-family: ITCAvantGardeStd-Demi;
+  font-size: 72px;
+  color: rgb(51, 51, 51);
+  margin-top: 45vh;
+  text-align: center;
+
+}
 </style>
 @endsection
 @section('content')
 <div id="pg3-wrapper" class="pg3-wrapper">
-  <img id="pg3_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/1.png'}}" style="z-index:-14;">
-  <img id="pg3_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/2.png'}}" style="z-index:-5;">
-  <img id="pg3_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/3.png'}}" style="z-index:-3;">
-  <img id="pg3_4" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/4.png'}}" style="z-index:-8;">
-  <img id="pg3_5" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/5.png'}}" style="z-index:-20;">
-  <img id="pg3_6" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/6.png'}}" style="z-index:-16;">
-  <img id="pg3_7_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/7_1.png'}}" style="z-index:-2;">
-  <img id="pg3_7_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/7_2.png'}}" style="z-index:-15;">
-  <img id="pg3_7_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/7_3.png'}}" style="z-index:-18;">
-  <img id="pg3_8" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/8.png'}}" style="z-index:-4;">
-  <img id="pg3_9" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/9.png'}}" style="z-index:-9;">
-  <img id="pg3_10" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/10.png'}}" style="z-index:-11;">
-  <img id="pg3_11_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_1.png'}}" style="z-index:-1;">
-  <img id="pg3_11_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_2.png'}}" style="z-index:-6;">
-  <img id="pg3_11_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_3.png'}}" style="z-index:-13;">
-  <img id="pg3_11_4" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_4.png'}}" style="z-index:-19;">
-  <img id="pg3_12" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/12.png'}}" style="z-index:-17;">
-  <img id="pg3_13_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/13_1.png'}}" style="z-index:-12;">
-  <img id="pg3_13_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/13_2.png'}}" style="z-index:-7;">
-  <img id="pg3_scene_activity" class="playground" src="{{'/images/'.$responses[0]->location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/activity.png'}}" style="z-index:-10;">
+  <img id="pg3_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/1.png'}}" style="z-index:-14;">
+  <img id="pg3_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/2.png'}}" style="z-index:-5;">
+  <img id="pg3_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/3.png'}}" style="z-index:-3;">
+  <img id="pg3_4" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/4.png'}}" style="z-index:-8;">
+  <img id="pg3_5" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/5.png'}}" style="z-index:-20;">
+  <img id="pg3_6" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/6.png'}}" style="z-index:-16;">
+  <img id="pg3_7_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/7_1.png'}}" style="z-index:-2;">
+  <img id="pg3_7_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/7_2.png'}}" style="z-index:-15;">
+  <img id="pg3_7_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/7_3.png'}}" style="z-index:-18;">
+  <img id="pg3_8" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/8.png'}}" style="z-index:-4;">
+  <img id="pg3_9" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/9.png'}}" style="z-index:-9;">
+  <img id="pg3_10" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/10.png'}}" style="z-index:-11;">
+  <img id="pg3_11_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_1.png'}}" style="z-index:-1;">
+  <img id="pg3_11_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_2.png'}}" style="z-index:-6;">
+  <img id="pg3_11_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_3.png'}}" style="z-index:-13;">
+  <img id="pg3_11_4" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/11_4.png'}}" style="z-index:-19;">
+  <img id="pg3_12" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/12.png'}}" style="z-index:-17;">
+  <img id="pg3_13_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/13_1.png'}}" style="z-index:-12;">
+  <img id="pg3_13_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/13_2.png'}}" style="z-index:-7;">
+  <img id="pg3_scene_activity" class="playground" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/activity.png'}}" style="z-index:-10;">
 </div>
 <div id="pg2-wrapper" class="pg2-wrapper">
-  <img id="pg2_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/1.png'}}" style="z-index:-14;">
-  <img id="pg2_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/2.png'}}" style="z-index:-5;">
-  <img id="pg2_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/3.png'}}" style="z-index:-3;">
-  <img id="pg2_4" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/4.png'}}" style="z-index:-8;">
-  <img id="pg2_5" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/5.png'}}" style="z-index:-20;">
-  <img id="pg2_6" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/6.png'}}" style="z-index:-16;">
-  <img id="pg2_7_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/7_1.png'}}" style="z-index:-2;">
-  <img id="pg2_7_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/7_2.png'}}" style="z-index:-15;">
-  <img id="pg2_7_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/7_3.png'}}" style="z-index:-18;">
-  <img id="pg2_8" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/8.png'}}" style="z-index:-4;">
-  <img id="pg2_9" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/9.png'}}" style="z-index:-9;">
-  <img id="pg2_10" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/10.png'}}" style="z-index:-11;">
-  <img id="pg2_11_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_1.png'}}" style="z-index:-1;">
-  <img id="pg2_11_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_2.png'}}" style="z-index:-6;">
-  <img id="pg2_11_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_3.png'}}" style="z-index:-13;">
-  <img id="pg2_11_4" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_4.png'}}" style="z-index:-19;">
-  <img id="pg2_12" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/12.png'}}" style="z-index:-17;">
-  <img id="pg2_13_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/13_1.png'}}" style="z-index:-12;">
-  <img id="pg2_13_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/13_2.png'}}" style="z-index:-7;">
-  <img id="pg2_scene_activity" class="playground" src="{{'/images/'.$responses[0]->location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/activity.png'}}" style="z-index:-10;">
+  <img id="pg2_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/1.png'}}" style="z-index:-14;">
+  <img id="pg2_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/2.png'}}" style="z-index:-5;">
+  <img id="pg2_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/3.png'}}" style="z-index:-3;">
+  <img id="pg2_4" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/4.png'}}" style="z-index:-8;">
+  <img id="pg2_5" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/5.png'}}" style="z-index:-20;">
+  <img id="pg2_6" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/6.png'}}" style="z-index:-16;">
+  <img id="pg2_7_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/7_1.png'}}" style="z-index:-2;">
+  <img id="pg2_7_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/7_2.png'}}" style="z-index:-15;">
+  <img id="pg2_7_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/7_3.png'}}" style="z-index:-18;">
+  <img id="pg2_8" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/8.png'}}" style="z-index:-4;">
+  <img id="pg2_9" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/9.png'}}" style="z-index:-9;">
+  <img id="pg2_10" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/10.png'}}" style="z-index:-11;">
+  <img id="pg2_11_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_1.png'}}" style="z-index:-1;">
+  <img id="pg2_11_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_2.png'}}" style="z-index:-6;">
+  <img id="pg2_11_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_3.png'}}" style="z-index:-13;">
+  <img id="pg2_11_4" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/11_4.png'}}" style="z-index:-19;">
+  <img id="pg2_12" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/12.png'}}" style="z-index:-17;">
+  <img id="pg2_13_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/13_1.png'}}" style="z-index:-12;">
+  <img id="pg2_13_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/13_2.png'}}" style="z-index:-7;">
+  <img id="pg2_scene_activity" class="playground" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/activity.png'}}" style="z-index:-10;">
 </div>
 <div id="pg1-wrapper" class="pg1-wrapper">
-  <img id="pg1_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/1.png'}}" style="z-index:-14;">
-  <img id="pg1_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/2.png'}}" style="z-index:-5;">
-  <img id="pg1_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/3.png'}}" style="z-index:-3;">
-  <img id="pg1_4" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/4.png'}}" style="z-index:-8;">
-  <img id="pg1_5" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/5.png'}}" style="z-index:-20;">
-  <img id="pg1_6" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/6.png'}}" style="z-index:-16;">
-  <img id="pg1_7_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/7_1.png'}}" style="z-index:-2;">
-  <img id="pg1_7_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/7_2.png'}}" style="z-index:-15;">
-  <img id="pg1_7_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/7_3.png'}}" style="z-index:-18;">
-  <img id="pg1_8" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/8.png'}}" style="z-index:-4;">
-  <img id="pg1_9" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/9.png'}}" style="z-index:-9;">
-  <img id="pg1_10" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/10.png'}}" style="z-index:-11;">
-  <img id="pg1_11_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_1.png'}}" style="z-index:-1;">
-  <img id="pg1_11_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_2.png'}}" style="z-index:-6;">
-  <img id="pg1_11_3" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_3.png'}}" style="z-index:-13;">
-  <img id="pg1_11_4" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_4.png'}}" style="z-index:-19;">
-  <img id="pg1_12" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/12.png'}}" style="z-index:-17;">
-  <img id="pg1_13_1" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/13_1.png'}}" style="z-index:-12;">
-  <img id="pg1_13_2" class="playground playground-hidden" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/13_2.png'}}" style="z-index:-7;">
-  <img id="pg1_scene_activity" class="playground" src="{{'/images/'.$responses[0]->location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/activity.png'}}" style="z-index:-10;">
+  <img id="pg1_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/1.png'}}" style="z-index:-14;">
+  <img id="pg1_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/2.png'}}" style="z-index:-5;">
+  <img id="pg1_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/3.png'}}" style="z-index:-3;">
+  <img id="pg1_4" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/4.png'}}" style="z-index:-8;">
+  <img id="pg1_5" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/5.png'}}" style="z-index:-20;">
+  <img id="pg1_6" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/6.png'}}" style="z-index:-16;">
+  <img id="pg1_7_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/7_1.png'}}" style="z-index:-2;">
+  <img id="pg1_7_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/7_2.png'}}" style="z-index:-15;">
+  <img id="pg1_7_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/7_3.png'}}" style="z-index:-18;">
+  <img id="pg1_8" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/8.png'}}" style="z-index:-4;">
+  <img id="pg1_9" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/9.png'}}" style="z-index:-9;">
+  <img id="pg1_10" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/10.png'}}" style="z-index:-11;">
+  <img id="pg1_11_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_1.png'}}" style="z-index:-1;">
+  <img id="pg1_11_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_2.png'}}" style="z-index:-6;">
+  <img id="pg1_11_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_3.png'}}" style="z-index:-13;">
+  <img id="pg1_11_4" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/11_4.png'}}" style="z-index:-19;">
+  <img id="pg1_12" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/12.png'}}" style="z-index:-17;">
+  <img id="pg1_13_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/13_1.png'}}" style="z-index:-12;">
+  <img id="pg1_13_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/13_2.png'}}" style="z-index:-7;">
+  <img id="pg1_scene_activity" class="playground" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/activity.png'}}" style="z-index:-10;">
 </div>
 <div id="global-wrapper" class="global-wrapper clearfix">
-  <img id="bg" class="background" src="{{'/images/global/'.$responses[0]->location.'_bg.png'}}">
+  @if($location == 'clouds' && ($responses[0]->time == 'night' || $responses[0]->time == 'evening'))
+  <img id="bg" class="background" src="{{'/images/global/'.$location.'_'.$responses[0]->time.'_bg.png'}}">
+  @else
+  <img id="bg" class="background" src="{{'/images/global/'.$location.'_bg.png'}}">
+  @endif
+  <!--<img id="bg" class="background" src="{{'/images/global/clouds_night_bg.png'}}">-->
+</div>
+<div id="time-wrapper" class="global-wrapper clearfix">
+  <!--<div class="background filter"  style="background:url('{{'/images/global/'.$location.'_'.$responses[0]->time.'_filter.png'}}');"></div>-->
+  <!--<img id="lights" class="background" src="{{'/images/global/'.$location.'_'.$responses[0]->time.'_lights.png'}}" style="z-index:1">-->
+  <!--<img id="lights" class="background" src="/images/global/clouds_night_lights.png" style="z-index:1">-->
 </div>
 
+<div id="fetching-wrapper" class="fetching-wrapper clearfix fetching-wrapper-show" style="z-index:99">
+  <p class="h1" style="z-index:100">fetching more playgrounds...</p>
+</div>
+
+<div id="stats-page-1" class="stats-wrapper stats-wrapper-1 clearfix stats-hide">
+  <p class="stats-title stats-title-1">Quick Maths</p>
+  <p id="stat5" class="stats-copy">The ideal playgrounds of individuals between 20-30 years old are mostly situated <font color="#ff6143">@{{this.stats.idealLocation19}}</font>.</p>
+  <p id="stat10" class="stats-copy">The ideal playgrounds of individuals between  31-50 years old  are mostly situated&nbsp;<strong>@{{this.stats.idealLocation30}}</strong>.</p>
+  <p id="stat15" class="stats-copy">Women tend to visit playgrounds with <strong>@{{this.stats.idealCompanyFemale}}</strong>.</p>
+  <p id="stat20" class="stats-copy">The ideal playgrounds of men  are mostly situated&nbsp;<font color="#ff6143">@{{this.stats.idealLocationMale}}</font>.</p>
+  <p id="stat25" class="stats-copy">Individuals over 50 years old mostly tend to visit the playground with&nbsp;<font color="#ff6143">@{{this.stats.idealCompany50}}</font>.</p>
+</div>
+<div id="stats-page-4" class="stats-wrapper stats-wrapper-2 clearfix stats-hide">
+  <p class="stats-title stats-title-2">Quick Maths</p>
+  <p id="stat4" class="stats-copy">Most people prefer that playgrounds have <strong>@{{this.stats.popEqu}}</strong>.</p>
+  <p id="stat9" class="stats-copy">Individuals between 31-50 years old mostly visit the playground to <strong>@{{this.stats.idealActivity30}}</strong>.</p>
+  <p id="stat14" class="stats-copy">Men prefer that playgrounds have <strong>@{{this.stats.popEquMale}}</strong>.</p>
+  <p id="stat19" class="stats-copy">The ideal playgrounds of women are mostly situated <font color="#ff6143">@{{this.stats.idealLocationFemale}}</font>.</p>
+  <p id="stat24" class="stats-copy">Individuals over 50 years old mostly tend to visit the playground to&nbsp;<font color="#ff6143">@{{this.stats.idealActivity50}}</font>.</p>
+</div>
+<div id="stats-page-3" class="stats-wrapper stats-wrapper-3 clearfix stats-hide">
+  <p class="stats-title stats-title-3">Quick Maths</p>
+  <p id="stat3" class="stats-copy"><strong>50%</strong> of all respondents, envision their ideal playground being situated <strong>outdoors, in nature</strong>.</p>
+  <p id="stat8" class="stats-copy">Individuals between 20-30 years old prefer that playgrounds have <strong>@{{this.stats.popEqu19}}</strong>.</p>
+  <p id="stat13" class="stats-copy">Women prefer that playgrounds have <font color="#ff6143">@{{this.stats.popEquFemale}}</font>.</p>
+  <p id="stat18" class="stats-copy">Men mostly visit the playground to <font color="#ff6143">@{{this.stats.idealActivityMale}}</font>.</p>
+  <p id="stat23" class="stats-copy">Individuals over 50 years old mostly prefer that playgrounds  have&nbsp;<font color="#ff6143">@{{this.stats.popEqu50}}</font>.</p>
+</div>
+<div id="stats-page-2" class="stats-wrapper stats-wrapper-4 clearfix stats-hide">
+  <p class="stats-title stats-title-4">Quick Maths</p>
+  <p id="stat2" class="stats-copy"><strong>50%</strong> of all respondents believe that the most important element of a playground is that <strong>it is adventurous and fun</strong>.</p>
+  <p id="stat7" class="stats-copy">Individuals between 20-30 years old mostly believe that the most important aspect of a playground is that <strong>it is safe</strong>.</p>
+  <p id="stat12" class="stats-copy">Individuals between 31-50 years old prefer that playgrounds have <font color="#ff6143">@{{this.stats.popEqu30}}</font>.</p>
+  <p id="stat17" class="stats-copy">Women mostly visit the playground to <font color="#ff6143">@{{this.stats.idealActivityFemale}}</font>.</p>
+  <p id="stat22" class="stats-copy">People with children mostly believe that the most important element of a playground is that&nbsp;<font color="#ff6143">we built it together</font>.</p>
+</div>
+<div id="stats-page-5" class="stats-wrapper stats-wrapper-5 clearfix stats-hide">
+  <p class="stats-title stats-title-5">Quick Maths</p>
+  <p id="stat1" class="stats-copy"><strong>50%</strong> of all respondents visit the playground to <strong>meet their friends</strong>.</p>
+  <p id="stat6" class="stats-copy">Individuals between 20-30 years old mostly visit playgrounds with <strong>their caregiver</strong>.</p>
+  <p id="stat11" class="stats-copy">Individuals between 31-50 years old mostly believe that the most important aspect of a playground is that <strong>it is adventurous and fun</strong>.</p>
+  <p id="stat16" class="stats-copy">Men tend to visit playgrounds with <font color="#ff6143">@{{this.stats.idealCompanyMale}}</font>.</p>
+  <p id="stat21" class="stats-copy">People with children mostly prefer their playgrounds to have&nbsp;<font color="#ff6143">@{{this.stats.popEquChildren}}</font>.</p>
+</div>
 
 @endsection
 
@@ -91,9 +155,38 @@ var app = new Vue({
     equipment1:{!!$responses[0]->equipment!!},
     equipment2:{!!$responses[1]->equipment!!},
     equipment3:{!!$responses[2]->equipment!!},
+    stats:{!!$stats!!},
+  },
+  methods:{
+    showFetch(){
+      var fetch = document.getElementById("fetching-wrapper");
+      fetch.classList.toggle("fetching-wrapper-show");
+    },
+    stats1(){
+      var s = document.getElementById("stats-page-1");
+      s.classList.toggle("stats-hide");
+    },
+    stats2(){
+      var s = document.getElementById("stats-page-2");
+      s.classList.toggle("stats-hide");
+    },
+    stats3(){
+      var s = document.getElementById("stats-page-3");
+      s.classList.toggle("stats-hide");
+    },
+    stats4(){
+      var s = document.getElementById("stats-page-4");
+      s.classList.toggle("stats-hide");
+    },
+    stats5(){
+      var s = document.getElementById("stats-page-5");
+      s.classList.toggle("stats-hide");
+    },
+    reload(){
+      window.location.reload();
+    }
   },
   mounted(){
-
     for(var i=0; i<this.equipment1.length;i++)
     {
       var id = this.equipment1[i].id;
@@ -220,6 +313,30 @@ var app = new Vue({
 
     }
 
+    setTimeout(this.showFetch,5000);
+    setTimeout(this.stats1,10000);
+    setTimeout(this.stats1,40000);
+    setTimeout(this.stats2,40000);
+    setTimeout(this.stats2,70000);
+    setTimeout(this.stats3,70000);
+    setTimeout(this.stats3,100000);
+    setTimeout(this.stats4,100000);
+    setTimeout(this.stats4,130000);
+    setTimeout(this.stats5,130000);
+    setTimeout(this.showFetch,160000);
+    setTimeout(this.reload,165000);
+
+    /*setTimeout(this.stats1,10000);
+    setTimeout(this.stats1,11000);
+    setTimeout(this.stats2,11000);
+    setTimeout(this.stats2,12000);
+    setTimeout(this.stats3,12000);
+    setTimeout(this.stats3,13000);
+    setTimeout(this.stats4,13000);
+    setTimeout(this.stats4,14000);
+    setTimeout(this.stats5,14000);
+    setTimeout(this.showFetch,15000);
+    setTimeout(this.reload,18000);*/
 
   }
 });
