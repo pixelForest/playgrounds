@@ -106,43 +106,43 @@
 
 <div id="stats-page-1" class="stats-wrapper stats-wrapper-1 clearfix stats-hide">
   <p class="stats-title stats-title-1">Quick Maths</p>
-  <p id="stat5" class="stats-copy">The ideal playgrounds of individuals between 20-30 years old are mostly situated <font color="#ff6143">@{{this.stats.idealLocation19}}</font>.</p>
-  <p id="stat10" class="stats-copy">The ideal playgrounds of individuals between  31-50 years old  are mostly situated&nbsp;<strong>@{{this.stats.idealLocation30}}</strong>.</p>
-  <p id="stat15" class="stats-copy">Women tend to visit playgrounds with <strong>@{{this.stats.idealCompanyFemale}}</strong>.</p>
-  <p id="stat20" class="stats-copy">The ideal playgrounds of men  are mostly situated&nbsp;<font color="#ff6143">@{{this.stats.idealLocationMale}}</font>.</p>
-  <p id="stat25" class="stats-copy">Individuals over 50 years old mostly tend to visit the playground with&nbsp;<font color="#ff6143">@{{this.stats.idealCompany50}}</font>.</p>
+  <p id="stat5" class="stats-copy">The ideal playgrounds of individuals between 20-30 years old are mostly situated <font color="#ff6143">@{{this.stats.q1}}</font>.</p>
+  <p id="stat10" class="stats-copy">The ideal playgrounds of individuals between  31-50 years old  are mostly situated&nbsp;<strong>@{{this.stats.q2}}</strong>.</p>
+  <p id="stat15" class="stats-copy">Women tend to visit playgrounds with <strong>@{{this.stats.q3}}</strong>.</p>
+  <p id="stat20" class="stats-copy">The ideal playgrounds of men  are mostly situated&nbsp;<font color="#ff6143">@{{this.stats.q4}}</font>.</p>
+  <p id="stat25" class="stats-copy">Individuals over 50 years old mostly tend to visit the playground with&nbsp;<font color="#ff6143">@{{this.stats.q5}}</font>.</p>
 </div>
 <div id="stats-page-4" class="stats-wrapper stats-wrapper-2 clearfix stats-hide">
   <p class="stats-title stats-title-2">Quick Maths</p>
-  <p id="stat4" class="stats-copy">Most people prefer that playgrounds have <strong>@{{this.stats.popEqu}}</strong>.</p>
-  <p id="stat9" class="stats-copy">Individuals between 31-50 years old mostly visit the playground to <strong>@{{this.stats.idealActivity30}}</strong>.</p>
-  <p id="stat14" class="stats-copy">Men prefer that playgrounds have <strong>@{{this.stats.popEquMale}}</strong>.</p>
-  <p id="stat19" class="stats-copy">The ideal playgrounds of women are mostly situated <font color="#ff6143">@{{this.stats.idealLocationFemale}}</font>.</p>
-  <p id="stat24" class="stats-copy">Individuals over 50 years old mostly tend to visit the playground to&nbsp;<font color="#ff6143">@{{this.stats.idealActivity50}}</font>.</p>
+  <p id="stat4" class="stats-copy">Most people prefer that playgrounds have <strong>@{{this.stats.q6}}</strong>.</p>
+  <p id="stat9" class="stats-copy">Individuals between 31-50 years old mostly visit the playground to <strong>@{{this.stats.q7}}</strong>.</p>
+  <p id="stat14" class="stats-copy">Men prefer that playgrounds have <strong>@{{this.stats.q8}}</strong>.</p>
+  <p id="stat19" class="stats-copy">The ideal playgrounds of women are mostly situated <font color="#ff6143">@{{this.stats.q9}}</font>.</p>
+  <p id="stat24" class="stats-copy">Individuals over 50 years old mostly tend to visit the playground to&nbsp;<font color="#ff6143">@{{this.stats.q10}}</font>.</p>
 </div>
 <div id="stats-page-3" class="stats-wrapper stats-wrapper-3 clearfix stats-hide">
   <p class="stats-title stats-title-3">Quick Maths</p>
-  <p id="stat3" class="stats-copy"><strong>50%</strong> of all respondents, envision their ideal playground being situated <strong>outdoors, in nature</strong>.</p>
-  <p id="stat8" class="stats-copy">Individuals between 20-30 years old prefer that playgrounds have <strong>@{{this.stats.popEqu19}}</strong>.</p>
-  <p id="stat13" class="stats-copy">Women prefer that playgrounds have <font color="#ff6143">@{{this.stats.popEquFemale}}</font>.</p>
-  <p id="stat18" class="stats-copy">Men mostly visit the playground to <font color="#ff6143">@{{this.stats.idealActivityMale}}</font>.</p>
-  <p id="stat23" class="stats-copy">Individuals over 50 years old mostly prefer that playgrounds  have&nbsp;<font color="#ff6143">@{{this.stats.popEqu50}}</font>.</p>
+  <p id="stat3" class="stats-copy"><strong>@{{this.stats.q11_1}}%</strong> of all respondents, envision their ideal playground being situated <strong>@{{this.stats.q11_2}}</strong>.</p>
+  <p id="stat8" class="stats-copy">Individuals between 20-30 years old prefer that playgrounds have <strong>@{{this.stats.q12}}</strong>.</p>
+  <p id="stat13" class="stats-copy">Women prefer that playgrounds have <font color="#ff6143">@{{this.stats.q13}}</font>.</p>
+  <p id="stat18" class="stats-copy">Men mostly visit the playground to <font color="#ff6143">@{{this.stats.q14}}</font>.</p>
+  <p id="stat23" class="stats-copy">Individuals over 50 years old mostly prefer that playgrounds  have&nbsp;<font color="#ff6143">@{{this.stats.q15}}</font>.</p>
 </div>
 <div id="stats-page-2" class="stats-wrapper stats-wrapper-4 clearfix stats-hide">
   <p class="stats-title stats-title-4">Quick Maths</p>
-  <p id="stat2" class="stats-copy"><strong>50%</strong> of all respondents believe that the most important element of a playground is that <strong>it is adventurous and fun</strong>.</p>
-  <p id="stat7" class="stats-copy">Individuals between 20-30 years old mostly believe that the most important aspect of a playground is that <strong>it is safe</strong>.</p>
-  <p id="stat12" class="stats-copy">Individuals between 31-50 years old prefer that playgrounds have <font color="#ff6143">@{{this.stats.popEqu30}}</font>.</p>
-  <p id="stat17" class="stats-copy">Women mostly visit the playground to <font color="#ff6143">@{{this.stats.idealActivityFemale}}</font>.</p>
-  <p id="stat22" class="stats-copy">People with children mostly believe that the most important element of a playground is that&nbsp;<font color="#ff6143">we built it together</font>.</p>
+  <p id="stat2" class="stats-copy"><strong>@{{this.stats.q16_1}}%</strong> of all respondents believe that the most important element of a playground is that <strong>@{{this.stats.q16_2}}</strong>.</p>
+  <p id="stat7" class="stats-copy">Individuals between 20-30 years old mostly believe that the most important aspect of a playground is that <strong>@{{this.stats.q17}}</strong>.</p>
+  <p id="stat12" class="stats-copy">Individuals between 31-50 years old prefer that playgrounds have <font color="#ff6143">@{{this.stats.q18}}</font>.</p>
+  <p id="stat17" class="stats-copy">Women mostly visit the playground to <font color="#ff6143">@{{this.stats.q19}}</font>.</p>
+  <p id="stat22" class="stats-copy">People with children mostly believe that the most important element of a playground is that&nbsp;<font color="#ff6143">@{{this.stats.q20}}</font>.</p>
 </div>
 <div id="stats-page-5" class="stats-wrapper stats-wrapper-5 clearfix stats-hide">
   <p class="stats-title stats-title-5">Quick Maths</p>
-  <p id="stat1" class="stats-copy"><strong>50%</strong> of all respondents visit the playground to <strong>meet their friends</strong>.</p>
-  <p id="stat6" class="stats-copy">Individuals between 20-30 years old mostly visit playgrounds with <strong>their caregiver</strong>.</p>
-  <p id="stat11" class="stats-copy">Individuals between 31-50 years old mostly believe that the most important aspect of a playground is that <strong>it is adventurous and fun</strong>.</p>
-  <p id="stat16" class="stats-copy">Men tend to visit playgrounds with <font color="#ff6143">@{{this.stats.idealCompanyMale}}</font>.</p>
-  <p id="stat21" class="stats-copy">People with children mostly prefer their playgrounds to have&nbsp;<font color="#ff6143">@{{this.stats.popEquChildren}}</font>.</p>
+  <p id="stat1" class="stats-copy"><strong>@{{this.stats.q21_1}}%</strong> of all respondents visit the playground to <strong>@{{this.stats.q21_2}}</strong>.</p>
+  <p id="stat6" class="stats-copy">Individuals between 20-30 years old mostly visit playgrounds with <strong>@{{this.stats.q22}}</strong>.</p>
+  <p id="stat11" class="stats-copy">Individuals between 31-50 years old mostly believe that the most important aspect of a playground is that <strong>@{{this.stats.q23}}</strong>.</p>
+  <p id="stat16" class="stats-copy">Men tend to visit playgrounds with <font color="#ff6143">@{{this.stats.q24}}</font>.</p>
+  <p id="stat21" class="stats-copy">People with children mostly prefer their playgrounds to have&nbsp;<font color="#ff6143">@{{this.stats.q25}}</font>.</p>
 </div>
 
 @endsection
