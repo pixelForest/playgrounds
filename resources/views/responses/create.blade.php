@@ -383,7 +383,7 @@ var app = new Vue({
     },
     locationChange(){
       this.locationUrl = '/images/'+this.location+'/bg.png';
-      if(this.location = 'clouds')
+      if(this.location == 'clouds')
       {
         var digi = document.getElementById('5');
         var tree = document.getElementById('11_3');
