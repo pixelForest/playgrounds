@@ -20,7 +20,7 @@
 </style>
 @endsection
 @section('content')
-<div id="pg3-wrapper" class="pg3-wrapper">
+<div id="pg1-wrapper" class="pg1-wrapper">
   <img id="pg3_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/1.png'}}" style="z-index:-14;">
   <img id="pg3_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/2.png'}}" style="z-index:-5;">
   <img id="pg3_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[2]->age.'/'.$responses[2]->activity.'/'.$responses[2]->company.'/3.png'}}" style="z-index:-3;">
@@ -64,7 +64,7 @@
   <img id="pg2_13_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/13_2.png'}}" style="z-index:-7;">
   <img id="pg2_scene_activity" class="playground" src="{{'/images/'.$location.'/'.$responses[1]->age.'/'.$responses[1]->activity.'/'.$responses[1]->company.'/activity.png'}}" style="z-index:-10;">
 </div>
-<div id="pg1-wrapper" class="pg1-wrapper">
+<div id="pg3-wrapper" class="pg3-wrapper">
   <img id="pg1_1" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/1.png'}}" style="z-index:-14;">
   <img id="pg1_2" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/2.png'}}" style="z-index:-5;">
   <img id="pg1_3" class="playground playground-hidden" src="{{'/images/'.$location.'/'.$responses[0]->age.'/'.$responses[0]->activity.'/'.$responses[0]->company.'/3.png'}}" style="z-index:-3;">
