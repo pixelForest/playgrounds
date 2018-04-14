@@ -151,11 +151,11 @@ label input{
     <div id="page1" class="page1 clearfix">
       <div class="h1">Hello there!</div>
       @if(count($errors)>0)
-        <p class="h2"  style="color:#ff5959">
-      		Whoops, you have to select an option for each field!
-      	</p>
+      <p class="h2"  style="color:#ff5959">
+        Whoops, you have to select an option for each field!
+      </p>
       @else
-        <p class="h2">Let's get to know one another. Please tell me about yourself.</p>
+      <p class="h2">Let's get to know one another. Please tell me about yourself.</p>
       @endif
       <div class="set1 clearfix">
         <div id="question1" class="q1 clearfix">
@@ -324,18 +324,18 @@ var app = new Vue({
       }
     },
     addUnique(e){
-        var val = e.srcElement.value;
-        if(e.srcElement.checked)
-        {
-          this.uniques.push(val);
-          e.srcElement.parentElement.classList.toggle("selected-option");
-        }
-        else
-        {
-          var index = this.uniques.indexOf(val);
-          this.uniques.splice(index,1);
-          e.srcElement.parentElement.classList.toggle("selected-option");
-        }
+      var val = e.srcElement.value;
+      if(e.srcElement.checked)
+      {
+        this.uniques.push(val);
+        e.srcElement.parentElement.classList.toggle("selected-option");
+      }
+      else
+      {
+        var index = this.uniques.indexOf(val);
+        this.uniques.splice(index,1);
+        e.srcElement.parentElement.classList.toggle("selected-option");
+      }
     },
     next1(){
       var page1 = document.getElementById("page1");
@@ -391,35 +391,32 @@ var app = new Vue({
         console.log(this.stats)
       });
     },
-    locationChange(){
-      this.locationUrl = '/images/'+this.location+'/bg.png';
-    },
-      checkForm(){
-        //page1 disable
-        var page1 =  document.getElementById('page1');
-        var options1 = page1.getElementsByTagName('select');
-        var valid1 = [];
-        for(var i = 0; i < options1.length; i++)
+    checkForm(){
+      //page1 disable
+      var page1 =  document.getElementById('page1');
+      var options1 = page1.getElementsByTagName('select');
+      var valid1 = [];
+      for(var i = 0; i < options1.length; i++)
+      {
+        if(options1[i].value == 0 || options1[i].value == "default")
         {
-          if(options1[i].value == 0 || options1[i].value == "default")
-          {
-            valid1.push(0);
-          }
-          else {
-            valid1.push(1);
-          }
-        };
-        if(!valid1.includes(0))
-        {
-          var n1 = document.getElementById('next1');
-          n1.disabled = false;
-          n1.classList.remove("disabled-color");
+          valid1.push(0);
         }
         else {
-          var n1 = document.getElementById('next1');
-          n1.disabled = true;
-          n1.classList.add("disabled-color");
+          valid1.push(1);
         }
+      };
+      if(!valid1.includes(0))
+      {
+        var n1 = document.getElementById('next1');
+        n1.disabled = false;
+        n1.classList.remove("disabled-color");
+      }
+      else {
+        var n1 = document.getElementById('next1');
+        n1.disabled = true;
+        n1.classList.add("disabled-color");
+      }
       //page2 disable
       var page2 =  document.getElementById('page2');
       var options2 = page2.getElementsByTagName('select');
@@ -523,7 +520,21 @@ var app = new Vue({
         n5.classList.add("disabled-color");
       }
     },
+    locationChange(){
+      this.locationUrl = '/images/'+this.location+'/bg.png';
+      if(this.time != 0)
+      {
+        this.timeChange();
+      };
+      if(this.activity != 0){
+        this.activityChange();
+      };
+    },
     timeChange(){
+      if(this.location == "clouds" && (this.time == "evening" || this.time == "night"))
+      {
+        this.locationUrl = '/images/'+this.location+'/bg_'+this.time+'.png';
+      }
       this.timeUrl = '/images/'+this.location+'/time/'+this.time+'_filter.png';
       this.lightsUrl = '/images/'+this.location+'/time/'+this.time+'_lights.png';
     },

@@ -92,12 +92,6 @@
   @else
   <img id="bg" class="background" src="{{'/images/global/'.$location.'_bg.png'}}">
   @endif
-  <!--<img id="bg" class="background" src="{{'/images/global/clouds_night_bg.png'}}">-->
-</div>
-<div id="time-wrapper" class="global-wrapper clearfix">
-  <!--<div class="background filter"  style="background:url('{{'/images/global/'.$location.'_'.$responses[0]->time.'_filter.png'}}');"></div>-->
-  <!--<img id="lights" class="background" src="{{'/images/global/'.$location.'_'.$responses[0]->time.'_lights.png'}}" style="z-index:1">-->
-  <!--<img id="lights" class="background" src="/images/global/clouds_night_lights.png" style="z-index:1">-->
 </div>
 
 <div id="fetching-wrapper" class="fetching-wrapper clearfix fetching-wrapper-show" style="z-index:99">
@@ -190,12 +184,11 @@ var app = new Vue({
         var p_audio = this.myAudio;
         var actualVolume = p_audio.volume;
         var fadeOutInterval = setInterval(function(){
-            actualVolume = (parseFloat(actualVolume) - 0.05).toFixed(1);
+            actualVolume = (parseFloat(actualVolume) - 0.03).toFixed(2);
             if(actualVolume >= 0){
                 p_audio.volume = actualVolume;
             } else {
                 p_audio.pause();
-                status = 'pause';
                 clearInterval(fadeOutInterval);
             }
         }, 100);
@@ -327,6 +320,11 @@ var app = new Vue({
       }
 
     }
+
+  },
+  created(){
+    this.myAudio = new Audio("{{'/OGG/'.$location.'.ogg'}}");
+    this.myAudio.play();
     setTimeout(this.showFetch,5000);
     setTimeout(this.stats1,10000);
     setTimeout(this.stats1,130000);
@@ -340,8 +338,9 @@ var app = new Vue({
     setTimeout(this.showFetch,610000);
     setTimeout(this.fadeOut,610000);
     setTimeout(this.reload,615000);
-
-    /*setTimeout(this.stats1,10000);
+    /*Test timeouts
+    setTimeout(this.showFetch,5000);
+    setTimeout(this.stats1,10000);
     setTimeout(this.stats1,11000);
     setTimeout(this.stats2,11000);
     setTimeout(this.stats2,12000);
@@ -353,11 +352,6 @@ var app = new Vue({
     setTimeout(this.showFetch,15000);
     setTimeout(this.fadeOut,15000);
     setTimeout(this.reload,18000);*/
-
-  },
-  created(){
-    this.myAudio = new Audio("{{'/OGG/'.$location.'.ogg'}}");
-    this.myAudio.play();
   }
 });
 </script>

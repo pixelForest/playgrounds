@@ -352,7 +352,8 @@ class ResponseController extends Controller
     $stats = $this->getStats();
     $idealLocation = Response::select('location')->groupBy('location')->orderByRaw('COUNT(*) DESC')->limit(1)->value('location');
     $responses = Response::orderBy('id', 'desc')->take(3)->get();
-    return view('global')->withResponses($responses)->withStats($stats)->withLocation($idealLocation);
+    $location = $responses[0]->location;
+    return view('global')->withResponses($responses)->withStats($stats)->withLocation($location);
   }
 
   //private functions
