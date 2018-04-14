@@ -41,7 +41,7 @@ html, body {
 
 .button-wrapper{
 	background-color: #fff;
-	width:30%;
+	width:31%;
 	height:100%;
 	position:absolute;
 	left:0px;
