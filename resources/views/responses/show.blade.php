@@ -61,18 +61,8 @@ var app = new Vue({
   el: '#app',
   data:{
     equipment:{!!$response->equipment!!},
-    location:"{{$response->location}}",
   },
   mounted(){
-    console.log(this.location);
-    if(this.location == 'clouds')
-    {
-      var digi = document.getElementById('5');
-      var tree = document.getElementById('11_3');
-      digi.style.zIndex = "1";
-      tree.style.zIndex = "1";
-    }
-
     for(var i=0; i<this.equipment.length;i++)
     {
       var id = this.equipment[i].id;
