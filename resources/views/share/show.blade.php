@@ -116,6 +116,7 @@ html, body {
 	(function() {
 		var htmlCanvas = document.getElementById('c'),
 		ctx = htmlCanvas.getContext('2d'),
+		location = {{$response->location}},
 		equipment = {!!$response->equipment!!},
 		equArr = [];
 
@@ -163,7 +164,13 @@ html, body {
 			scene_time = new Image();
 			scene_lights = new Image();
 
-			scene_bg.src = "{{'/images/'.$response->location.'/bg.png'}}";
+			if(location == "clouds" && (time == "evening" || time == "night"))
+			{
+				scene_bg.src ="{{'/images/'.$response->location.'/bg_'.$response->time.'.png'}}";
+			}
+			else {
+				scene_bg.src = "{{'/images/'.$response->location.'/bg.png'}}";
+			};
 			scene_1.src = "{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/1.png'}}";
 			scene_2.src = "{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/2.png'}}";
 			scene_3.src = "{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/3.png'}}";

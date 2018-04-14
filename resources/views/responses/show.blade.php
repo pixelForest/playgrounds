@@ -24,7 +24,11 @@
   </div>
 </div>
 <div id="pgWrapper" class="playground_wrapper clearfix">
+  @if($response->location == 'clouds' && ($response->time == 'night' || $response->time == 'evening'))
+  <img id="scene_bg" class="scene" src="{{'/images/'.$response->location.'/bg_'.$response->time.'.png'}}" style="z-index:-21;">
+  @else
   <img id="scene_bg" class="scene" src="{{'/images/'.$response->location.'/bg.png'}}" style="z-index:-21;">
+  @endif
   <img id="1" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/1.png'}}" style="z-index:-14;">
   <img id="2" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/2.png'}}" style="z-index:-5;">
   <img id="3" class="scene scene-hidden" src="{{'/images/'.$response->location.'/'.$response->age.'/'.$response->activity.'/'.$response->company.'/3.png'}}" style="z-index:-3;">
