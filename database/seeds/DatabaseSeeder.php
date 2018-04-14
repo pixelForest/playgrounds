@@ -19,79 +19,79 @@ class DatabaseSeeder extends Seeder
 
         DB::table('equipment')->insert(
           [
-              'answer' => 'Adult Exercise Equipment',
+              'answer' => 'adult exercise equipment',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Swings',
+              'answer' => 'swings',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'See-saws',
+              'answer' => 'see-saws',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Slides',
+              'answer' => 'slides',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Sculptures',
+              'answer' => 'sculptures',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Springers',
+              'answer' => 'springers',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Inclusive Equipment',
+              'answer' => 'inclusive equipment',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Water Features',
+              'answer' => 'water features',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Sandbox',
+              'answer' => 'sandbox',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Garden',
+              'answer' => 'garden',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Digital Technology',
+              'answer' => 'digital technology',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Trees',
+              'answer' => 'trees',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);
         DB::table('equipment')->insert(
           [
-              'answer' => 'Park Benches',
+              'answer' => 'park benches',
               'created_at' => date('Y-m-d H:i:s'),
               'updated_at' => date('Y-m-d H:i:s'),
           ]);

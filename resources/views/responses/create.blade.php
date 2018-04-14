@@ -10,6 +10,9 @@ label input{
 .q8-option{
   padding-top: 15px;
 }
+.disabled-color{
+  background-color: #333 !important;
+}
 </style>
 @endsection
 @section('content')
@@ -36,7 +39,7 @@ label input{
         <label id="Q12-12" class="q12-option q12-option-12"><input name="equipment[]" type="checkbox" value="12" @change="addEquipment">a garden</label>
         <label id="Q12-13" class="q12-option q12-option-13"><input name="equipment[]" type="checkbox" value="13" @change="addEquipment">park benches</label>
       </div>
-      <button id="next5" class="next" type="submit" name="action" value="{{route('responses.store')}}">next</button>
+      <button id="next5" class="next disabled-color" disabled type="submit" name="action" value="{{route('responses.store')}}">next</button>
     </div>
     <div id="page4" class="page4 clearfix">
       <p class="h1">Imagine!</p>
@@ -63,7 +66,7 @@ label input{
             <option value="night">at night</option>
           </select>
           <label for="company" class="text text-4">with</label>
-          <select id="company" class="_select _select-3" name="company" v-model="company">
+          <select id="company" class="_select _select-3" name="company" v-model="company" @change="checkForm">
             <option value="0">select companions</option>
             <option value="mychildren">my children.</option>
             <option value="children">the children I care for.</option>
@@ -86,7 +89,7 @@ label input{
           </select>
         </div>
       </div>
-      <button type="button" id="next4" class="next" @click="next4">next</button>
+      <button type="button" id="next4" class="next disabled-color" disabled @click="next4">next</button>
     </div>
     <div id="page3" class="page3 clearfix">
       <p class="h1">That's great!</p>
@@ -94,7 +97,7 @@ label input{
       <div class="set3 clearfix">
         <div id="question7" class="q7 clearfix">
           <label for="element" class="text">To me, the most important element of a playground is that</label>
-          <select id="element" class="_select" name="element">
+          <select id="element" class="_select" name="element" @change="checkForm">
             <option value="0">select an option</option>
             <option value="safe">it is safe.</option>
             <option value="fun">it is adventurous and fun.</option>
@@ -112,7 +115,7 @@ label input{
           <label id="Q8-4" class="q8-option q8-option-4"><input name="uniques[]" type="checkbox" value="4" @change="addUnique">based on children's stories or imaginary landscapes</label>
         </div>
       </div>
-      <button type="button" id="next3" class="next" @click="next3">next</button>
+      <button type="button" id="next3" class="next disabled-color" disabled @click="next3">next</button>
     </div>
     <div id="page2" class="page2 clearfix">
       <p class="h1">Awesome!</p>
@@ -120,7 +123,7 @@ label input{
       <div class="set2 clearfix">
         <div id="question5" class="q5 clearfix">
           <label for="inclusive" class="text text-8">I</label>
-          <select id="inclusive" class="_select" name="inclusive">
+          <select id="inclusive" class="_select" name="inclusive" @change="checkForm">
             <option value="0">select an option</option>
             <option value="strongly agree">strongly agree that</option>
             <option value="agree">agree that</option>
@@ -132,7 +135,7 @@ label input{
         </div>
         <div id="question6" class="q6 clearfix">
           <label for="belonging" class="text text-11">I</label>
-          <select id="belonging" class="_select" name="belonging">
+          <select id="belonging" class="_select" name="belonging" @change="checkForm">
             <option value="0">select an option</option>
             <option value="strongly agree">strongly agree that</option>
             <option value="agree">agree that</option>
@@ -143,7 +146,7 @@ label input{
           <p class="text text-13">shared spaces like playgrounds contribute towards a stronger sense of belonging in Singapore.</p>
         </div>
       </div>
-      <button type="button" id="next2" class="next" @click="next2">next</button>
+      <button type="button" id="next2" class="next disabled-color" disabled @click="next2">next</button>
     </div>
     <div id="page1" class="page1 clearfix">
       <div class="h1">Hello there!</div>
@@ -157,7 +160,7 @@ label input{
       <div class="set1 clearfix">
         <div id="question1" class="q1 clearfix">
           <label for="age" class="text">I am</label>
-          <select id="age" class="_select" name="age" v-model="age">
+          <select id="age" class="_select" name="age" v-model="age" @change="checkForm">
             <option value="default">select age</option>
             <option value="12">under the age of 12</option>
             <option value="13">between 13–18 years old</option>
@@ -168,7 +171,7 @@ label input{
         </div>
         <div id="question2" class="q2 clearfix">
           <label for="sex" class="text">and I'm</label>
-          <select id="sex" class="_select" name="sex">
+          <select id="sex" class="_select" name="sex" @change="checkForm">
             <option value="0">select gender</option>
             <option value="male">male.</option>
             <option value="female">female.</option>
@@ -176,7 +179,7 @@ label input{
         </div>
         <div id="question3" class="q3 clearfix">
           <label for="children" class="text">I have</label>
-          <select id="children" class="_select" name="children">
+          <select id="children" class="_select" name="children" @change="checkForm">
             <option value="0">select children</option>
             <option value="yes">children</option>
             <option value="no">no children</option>
@@ -184,7 +187,7 @@ label input{
         </div>
         <div id="question4" class="q4 clearfix">
           <label for="housing" class="text">and I live in a</label>
-          <select id="housing" class="_select" name="housing">
+          <select id="housing" class="_select" name="housing" @change="checkForm">
             <option value="0">select housing</option>
             <option value="HDB flat">HDB flat.</option>
             <option value="condominium">condominium.</option>
@@ -192,7 +195,7 @@ label input{
           </select>
         </div>
       </div>
-      <button type="button" id="next1" class="next" @click="next1">next</button>
+      <button type="button" id="next1" class="next disabled-color" disabled @click="next1">next</button>
     </div>
   </form>
   <div id="pagination" class="pagination clearfix">
@@ -233,11 +236,6 @@ label input{
 
 @section('scripts')
 <script>
-setInterval(function(){
-
-},7000);
-</script>
-<script>
 var app = new Vue({
   el: '#app',
   data:{
@@ -247,6 +245,7 @@ var app = new Vue({
     activity: '0',
     company: '0',
     equipment:[],
+    uniques: [],
     stats:'',
     locationUrl:'',
     activityUrl:'',
@@ -325,7 +324,18 @@ var app = new Vue({
       }
     },
     addUnique(e){
-        e.srcElement.parentElement.classList.toggle("selected-option");
+        var val = e.srcElement.value;
+        if(e.srcElement.checked)
+        {
+          this.uniques.push(val);
+          e.srcElement.parentElement.classList.toggle("selected-option");
+        }
+        else
+        {
+          var index = this.uniques.indexOf(val);
+          this.uniques.splice(index,1);
+          e.srcElement.parentElement.classList.toggle("selected-option");
+        }
     },
     next1(){
       var page1 = document.getElementById("page1");
@@ -391,6 +401,110 @@ var app = new Vue({
         tree.style.zIndex = "1";
       }
     },
+      checkForm(){
+        //page1 disable
+        var page1 =  document.getElementById('page1');
+        var options1 = page1.getElementsByTagName('select');
+        var valid1 = [];
+        for(var i = 0; i < options1.length; i++)
+        {
+          if(options1[i].value == 0 || options1[i].value == "default")
+          {
+            valid1.push(0);
+          }
+          else {
+            valid1.push(1);
+          }
+        };
+        if(!valid1.includes(0))
+        {
+          var n1 = document.getElementById('next1');
+          n1.disabled = false;
+          n1.classList.remove("disabled-color");
+        }
+      //page2 disable
+      var page2 =  document.getElementById('page2');
+      var options2 = page2.getElementsByTagName('select');
+      var valid2 = [];
+      for(var i = 0; i < options2.length; i++)
+      {
+        if(options2[i].value == 0 || options2[i].value == "default")
+        {
+          valid2.push(0);
+        }
+        else {
+          valid2.push(1);
+        }
+      };
+      if(!valid2.includes(0))
+      {
+        var n2 = document.getElementById('next2');
+        n2.disabled = false;
+        n2.classList.remove("disabled-color");
+      }
+      //page3 disable
+      var page3 =  document.getElementById('page3');
+      var options3 = page3.getElementsByTagName('select');
+      var valid3 = [];
+      for(var i = 0; i < options3.length; i++)
+      {
+        if(options3[i].value == 0 || options3[i].value == "default")
+        {
+          valid3.push(0);
+        }
+        else {
+          valid3.push(1);
+        }
+      };
+      var uniques = document.get
+      if(!valid3.includes(0) && this.uniques.length != 0)
+      {
+        var n3 = document.getElementById('next3');
+        n3.disabled = false;
+        n3.classList.remove("disabled-color");
+      }
+      //page4 disable
+      var page4 =  document.getElementById('page4');
+      var options4 = page4.getElementsByTagName('select');
+      var valid4 = [];
+      for(var i = 0; i < options4.length; i++)
+      {
+        if(options4[i].value == 0 || options4[i].value == "default")
+        {
+          valid4.push(0);
+        }
+        else {
+          valid4.push(1);
+        }
+      };
+      if(!valid4.includes(0))
+      {
+        var n4= document.getElementById('next4');
+        n4.disabled = false;
+        n4.classList.remove("disabled-color");
+      }
+      //page5 disable
+      var page5 =  document.getElementById('page5');
+      var options5 = page5.getElementsByTagName('select');
+      var valid5 = [];
+      for(var i = 0; i < options5.length; i++)
+      {
+        if(options5[i].value == 0 || options5[i].value == "default")
+        {
+          valid5.push(0);
+        }
+        else {
+          valid5.push(1);
+        }
+      };
+      var uniques = document.get
+      if(!valid5.includes(0) && this.equipment.length != 0)
+      {
+        var n5 = document.getElementById('next5');
+        n5.disabled = false;
+        n5.classList.remove("disabled-color");
+      }
+    },
     timeChange(){
       this.timeUrl = '/images/'+this.location+'/time/'+this.time+'_filter.png';
       this.lightsUrl = '/images/'+this.location+'/time/'+this.time+'_lights.png';
@@ -416,12 +530,18 @@ var app = new Vue({
       this.equip12Url = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'12.png';
       this.equip13_1Url = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'13_1.png';
       this.equip13_2Url = '/images/'+this.location+'/'+this.age+'/'+this.activity+'/'+this.company+'/'+'13_2.png';
+      this.checkForm();
     },
 
   },
   mounted(){
     this.locationUrl = '/images/_sketch.png';
-    console.log(this.locationUrl);
+  },
+  created(){
+    window.addEventListener('click',this.checkForm);
+  },
+  destroyed(){
+    window.removeEventListener('click',this.checkForm);
   }
 });
 </script>
