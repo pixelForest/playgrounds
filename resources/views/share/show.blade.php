@@ -116,7 +116,8 @@ html, body {
 	(function() {
 		var htmlCanvas = document.getElementById('c'),
 		ctx = htmlCanvas.getContext('2d'),
-		location = {{$response->location}},
+		location = "{{$response->location}}",
+		time = "{{$response->time}}",
 		equipment = {!!$response->equipment!!},
 		equArr = [];
 
