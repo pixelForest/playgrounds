@@ -422,6 +422,11 @@ var app = new Vue({
           n1.disabled = false;
           n1.classList.remove("disabled-color");
         }
+        else {
+          var n1 = document.getElementById('next1');
+          n1.disabled = true;
+          n1.classList.add("disabled-color");
+        }
       //page2 disable
       var page2 =  document.getElementById('page2');
       var options2 = page2.getElementsByTagName('select');
@@ -441,6 +446,11 @@ var app = new Vue({
         var n2 = document.getElementById('next2');
         n2.disabled = false;
         n2.classList.remove("disabled-color");
+      }
+      else {
+        var n2 = document.getElementById('next2');
+        n2.disabled = true;
+        n2.classList.add("disabled-color");
       }
       //page3 disable
       var page3 =  document.getElementById('page3');
@@ -463,6 +473,11 @@ var app = new Vue({
         n3.disabled = false;
         n3.classList.remove("disabled-color");
       }
+      else {
+        var n3 = document.getElementById('next3');
+        n3.disabled = true;
+        n3.classList.add("disabled-color");
+      }
       //page4 disable
       var page4 =  document.getElementById('page4');
       var options4 = page4.getElementsByTagName('select');
@@ -482,6 +497,11 @@ var app = new Vue({
         var n4= document.getElementById('next4');
         n4.disabled = false;
         n4.classList.remove("disabled-color");
+      }
+      else {
+        var n4 = document.getElementById('next4');
+        n4.disabled = true;
+        n4.classList.add("disabled-color");
       }
       //page5 disable
       var page5 =  document.getElementById('page5');
@@ -503,6 +523,11 @@ var app = new Vue({
         var n5 = document.getElementById('next5');
         n5.disabled = false;
         n5.classList.remove("disabled-color");
+      }
+      else {
+        var n5 = document.getElementById('next5');
+        n5.disabled = true;
+        n5.classList.add("disabled-color");
       }
     },
     timeChange(){
