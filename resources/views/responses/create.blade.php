@@ -11,7 +11,7 @@ label input{
   padding-top: 15px;
 }
 .disabled-color{
-  background-color: #333 !important;
+  opacity:0.5;
 }
 </style>
 @endsection
